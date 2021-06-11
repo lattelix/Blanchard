@@ -10,6 +10,9 @@ const heroSlider = new Swiper('.hero__swiper-container', {
 		delay: 12000,
 		disableOnInteraction: false,
 	},
+	a11y: {
+		enabled: false,
+	},
 });
 
 
@@ -30,6 +33,10 @@ const gellerySlider = new Swiper('.gellery__slider', {
 	slidesPerColumn: 2,
 	slidesPerGroup: 3,
 	spaceBetween: 50,
+	// preloadImages: false,
+	// lazy: true,
+	// loadPrevNext: true,
+	// loadPrevNextAmount: 6,
 	pagination: {
 		el: ".gellery__swiper-pagination",
 		type: "fraction",
@@ -44,18 +51,18 @@ const gellerySlider = new Swiper('.gellery__slider', {
 			slidesPerView: 1,
 			slidesPerColumn: 1,
 			slidesPerGroup: 1,
-			spaceBetween: 0,
+			spaceBetween: 34,
 		},
 		768: {
-			slidesPerView: 4,
+			slidesPerView: 2,
 			slidesPerColumn: 2,
-			slidesPerGroup: 4,
+			slidesPerGroup: 2,
 			spaceBetween: 34,
 		},
 		1200: {
-			slidesPerView: 6,
+			slidesPerView: 3,
 			slidesPerColumn: 2,
-			slidesPerGroup: 6,
+			slidesPerGroup: 3,
 			spaceBetween: 50,
 		},
 	},
@@ -92,7 +99,7 @@ const gellerySlider = new Swiper('.gellery__slider', {
 //* catalogues accordion
 
 $(function () {
-	$("#accordion").accordion({
+	$(".catalogues__accordion").accordion({
 		heightStyle: "content",
 		collapsible: true,
 		active: 0
@@ -109,5 +116,19 @@ const projectsSlider = new Swiper('.projects__slider', {
 	navigation: {
 		nextEl: '.projects__button-next',
 		prevEl: '.projects__button-prev',
+	},
+	breakpont: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 34,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 34,
+		},
+		1200: {
+			slidesPerView: 3,
+			spaceBetween: 50,
+		},
 	},
 });

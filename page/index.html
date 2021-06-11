@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
 	<title>Blanchard</title>
 
@@ -19,28 +19,17 @@
 	<meta property="og:url" content="https://www.mywebsite.com/page">
 	<link rel="canonical" href="https://www.mywebsite.com/page">
 
-	<!-- default favion -->
 	<link rel="shortcut icon" href="favicon.ico" type="image/png">
-	<!-- favicon (best support) -->
 	<link rel="icon" href="favicon.ico">
-	<!-- favicon (modern browsers) -->
 	<link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
-	<!-- PWA (for apple) -->
 	<link rel="apple-touch-icon" href="img/icon/apple-touch-icon.png">
-	<!-- PWA (for android) -->
 	<link rel="manifest" href="my.webmanifest">
 	<meta name="theme-color" content="#9D5CD0">
-	<!-- simplebar url="https://github.com/Grsmto/simplebar" -->
 	<link rel="stylesheet" href="css/simplebar.css">
-	<!-- plugin for select "choises.js" url="https://github.com/jshjohnson/Choices" -->
 	<link rel="stylesheet" href="css/choices.min.css">
-	<!-- normolize css 8.0.1 url="https://necolas.github.io/normalize.css" -->
 	<link rel="stylesheet" href="css/normalize.css">
-	<!-- swiper url="https://swiperjs.com/" -->
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<!-- used tool for fonts url="https://google-webfonts-helper.herokuapp.com/fonts" -->
 	<link rel="stylesheet" href="css/fonts.css">
-	<!-- castom styles -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -280,32 +269,20 @@
 			<!-- Slider main container -->
 			<div class="swiper-container hero__swiper-container">
 				<div class="hero__swiper-wrapper swiper-wrapper">
-					<div class="swiper-slide hero__swiper-slide">
-						<picture>
-							<source media="(min-width: 1200px)" srcset="img/image/bg/hero_slide-1.jpg">
-							<source media="(min-width: 1024px)" srcset="img/image/bg/hero_slide-lg-1.jpg">
-							<source media="(min-width: 768px)" srcset="img/image/bg/hero_slide-md-1.jpg">
-							<source media="(min-width: 320px)" srcset="img/image/bg/hero_slide-sm-1.jpg">
-							<img src="img/image/bg/hero_slide-1.jpg" alt="">
-						</picture>
+					<div class="swiper-slide hero__slide">
+						<img class="hero__slide-img" src="img/image/bg/hero_slide-1.jpg"
+							srcset="img/image/bg/hero_slide-sm-1.jpg 320w, img/image/bg/hero_slide-md-1.jpg 768w, img/image/bg/hero_slide-lg-1.jpg 1024w, img/image/bg/hero_slide-1.jpg 1920w"
+							alt="фоновая картинка">
 					</div>
-					<div class="swiper-slide hero__swiper-slide">
-						<picture>
-							<source media="(min-width: 1200px)" srcset="img/image/bg/hero_slide-2.jpg">
-							<source media="(min-width: 1024px)" srcset="img/image/bg/hero_slide-lg-2.jpg">
-							<source media="(min-width: 768px)" srcset="img/image/bg/hero_slide-md-2.jpg">
-							<source media="(min-width: 320px)" srcset="img/image/bg/hero_slide-sm-2.jpg">
-							<img src="img/image/bg/hero_slide-2.jpg" alt="">
-						</picture>
+					<div class="swiper-slide hero__slide">
+						<img class="hero__slide-img" src="img/image/bg/hero_slide-2.jpg"
+							srcset="img/image/bg/hero_slide-sm-2.jpg 320w, img/image/bg/hero_slide-md-2.jpg 768w, img/image/bg/hero_slide-lg-2.jpg 1024w, img/image/bg/hero_slide-2.jpg 1920w"
+							alt="фоновая картинка">
 					</div>
-					<div class="swiper-slide hero__swiper-slide">
-						<picture>
-							<source media="(min-width: 1200px)" srcset="img/image/bg/hero_slide-3.jpg">
-							<source media="(min-width: 1024px)" srcset="img/image/bg/hero_slide-lg-3.jpg">
-							<source media="(min-width: 768px)" srcset="img/image/bg/hero_slide-md-3.jpg">
-							<source media="(min-width: 320px)" srcset="img/image/bg/hero_slide-sm-3.jpg">
-							<img src="img/image/bg/hero_slide-3.jpg" alt="">
-						</picture>
+					<div class="swiper-slide hero__slide">
+						<img class="hero__slide-img" src="img/image/bg/hero_slide-3.jpg"
+							srcset="img/image/bg/hero_slide-sm-3.jpg 320w, img/image/bg/hero_slide-md-3.jpg 768w, img/image/bg/hero_slide-lg-3.jpg 1024w, img/image/bg/hero_slide-3.jpg 1920w"
+							alt="фоновая картинка">
 					</div>
 				</div>
 			</div>
@@ -356,28 +333,131 @@
 					</div>
 					<div class="gellery__swiper-wrapper swiper-wrapper">
 						<div class="gellery__slide swiper-slide">
-
+							<img loading="lazy" src="img/image/gellery/0ded3bfb72998ba4ebfaa561ca6b8f49.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
 						</div>
 						<div class="gellery__slide swiper-slide">
-
+							<img loading="lazy" src="img/image/gellery/13db76cc06926e8a08ef49959c73c931.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
 						</div>
 						<div class="gellery__slide swiper-slide">
-
+							<img loading="lazy" src="img/image/gellery/21dc3eaab13a640dfb135467f10b334c.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
 						</div>
 						<div class="gellery__slide swiper-slide">
-
+							<img loading="lazy" src="img/image/gellery/44a1ebb15d5ab09a5e9470eca1a3db69.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
 						</div>
 						<div class="gellery__slide swiper-slide">
-
+							<img loading="lazy" src="img/image/gellery/5f2e584e4692f4d794c9693ef0330436.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
 						</div>
 						<div class="gellery__slide swiper-slide">
-
+							<img loading="lazy" src="img/image/gellery/6c6d6ca23ab2cf0f6065d74964a87d14.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/77459c3d7279d61babde882616f038bb.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/85ded6e40319542bb95f0448d3942019.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/87b09066bb4a74106e10c3fe27969e50.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/9305a7b079b819f7daa7db2ddff2b5e9.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/94f949f699ce2622361d453487189afb.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/ae7f083e0ab5a9da790c0b3f8ef22cf9.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/b05cb8875230560f57f90ecec6135466.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/b6d876f025e9f0aa2e4785ede7dae34f.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/c1a915172719cbbd36b4d859a993c3ff.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/c27a2a427f8df18be0a10b88fd294ab8.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/c8b667548bf17df6a660fc086331ee72.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/cebc0d58b002f14cefb90aac6490fdda.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/d7b46456f11842daedce1be3a083a9ccc.png" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/db1fb85aea45d5b357dbb6d25fda14ad.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/def501f7b3733da8ad3e1ff97833ffa5.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/ef112308bc0826881bf626c233f1c414.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/f87a47bfd74694c892a37d74abb7e51b.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
+						</div>
+						<div class="gellery__slide swiper-slide">
+							<img loading="lazy" src="img/image/gellery/fcde359460cd80c1daaff2bc4fde8bbb.jpg" alt="Картина из галереи"
+								class="gellery__slide-img">
+							<!-- <div class="swiper-lazy-preloader"></div> -->
 						</div>
 					</div>
 				</div>
 				<div class="gellery__warn gellery__warn-mobile">Вам предоставляется 10 бесплатных скачиваний. Для увеличения
 					количества скачиваний <a class="authorization-link link">авторизуйтесь,</a> либо воспользуйтесь
-					лицензией.</div>
+					лицензией.
+				</div>
 			</div>
 		</section>
 
@@ -397,7 +477,7 @@
 							</button>
 						</li>
 						<li class="catalogues__tab">
-							<button class="catalogues__tab-btn" data-path="">
+							<button class="catalogues__tab-btn catalogues__tab-active" data-path="">
 								<img src="img/icon/country-3.png" alt="" class="catalogues__tab-img">
 							</button>
 						</li>
@@ -418,10 +498,11 @@
 					этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
 					нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на
 					независимые элементы. </p>
-				<div class="catalogues__body">
+				<div class="catalogues__body catalogues__body-active">
 					<div class="catalogues__content">
 						<div class="catalogues__portrait">
-							<img src="img/image/1af2a905dc8.png" alt="">
+							<img loading="lazy" class="catalogues__portrait-img" src="img/image/1af2a905dc8.jpg"
+								alt="Портрет деятеля">
 						</div>
 						<div class="catalogues__naming">Доменико Гирландайо</div>
 						<div class="catalogues__date">
@@ -433,7 +514,7 @@
 							циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в
 							их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
 					</div>
-					<div class="catalogues__accordion" id="accordion">
+					<div class="catalogues__accordion">
 						<div class="catalogues__item-title">
 							<span class="catalogues__item-naming">C 1400 по 1499 гг.</span>
 							<div class="catalogues__item-icon">
@@ -482,19 +563,13 @@
 								<li class="catalogues__content-item">
 									<a class="catalogues__content-link" href="#no_scroll">Джованни да Удине</a></li>
 								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll"></a></li>
-								<li class="catalogues__content-item">
 									<a class="catalogues__content-link" href="#no_scroll">Бреа, Людовико</a></li>
 								<li class="catalogues__content-item">
 									<a class="catalogues__content-link" href="#no_scroll">Джованни ди Паоло</a></li>
 								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll"></a></li>
-								<li class="catalogues__content-item">
 									<a class="catalogues__content-link" href="#no_scroll">Бьяджо д’Антонио Туччи</a></li>
 								<li class="catalogues__content-item">
 									<a class="catalogues__content-link" href="#no_scroll">Джорджоне</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll"></a></li>
 							</ul>
 						</div>
 						<div class="catalogues__item-title">
@@ -502,228 +577,208 @@
 							<div class="catalogues__item-icon"></div>
 						</div>
 						<div class="catalogues__item-content">
-							<ul class="catalogues__content-list">
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бенедетто ди Биндо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бергоньоне, Амброджо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Биссоло, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Больтраффио, Джованни</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бонсиньори, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Боттичини, Рафаэлло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Брамантино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бреа, Людовико</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бьяджо д’Антонио Туччи</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Веккьетта</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Андреа Верроккьо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Доменико Гирландайо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Беноццо Гоццоли</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Граначчи, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Грегорио ди Чекко</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джованни да Удине</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джованни ди Паоло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джорджоне</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Парентино, Бернардо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пезеллино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пьетро Перуджино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Перуцци, Бальдассаре</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пизанелло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пинтуриккьо</a></li>
-							</ul>
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
 						</div>
 						<div class="catalogues__item-title">
 							<span class="catalogues__item-naming">C 1600 по 1699 гг.</span>
 							<div class="catalogues__item-icon"></div>
 						</div>
 						<div class="catalogues__item-content">
-							<ul class="catalogues__content-list">
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бенедетто ди Биндо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бергоньоне, Амброджо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Биссоло, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Больтраффио, Джованни</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бонсиньори, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Боттичини, Рафаэлло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Брамантино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бреа, Людовико</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бьяджо д’Антонио Туччи</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Веккьетта</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Андреа Верроккьо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Доменико Гирландайо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Грегорио ди Чекко</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джованни да Удине</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джованни ди Паоло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джорджоне</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Парентино, Бернардо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пезеллино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пьетро Перуджино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Перуцци, Бальдассаре</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пизанелло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пинтуриккьо</a></li>
-							</ul>
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
 						</div>
 						<div class="catalogues__item-title">
 							<span class="catalogues__item-naming">C 1700 по 1799 гг.</span>
 							<div class="catalogues__item-icon"></div>
 						</div>
 						<div class="catalogues__item-content">
-							<ul class="catalogues__content-list">
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бенедетто ди Биндо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бергоньоне, Амброджо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бонсиньори, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Боттичини, Рафаэлло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пинтуриккьо</a></li>
-							</ul>
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
 						</div>
 						<div class="catalogues__item-title">
 							<span class="catalogues__item-naming">C 1800 по 1899 гг.</span>
 							<div class="catalogues__item-icon"></div>
 						</div>
 						<div class="catalogues__item-content">
-							<ul class="catalogues__content-list">
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бенедетто ди Биндо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бергоньоне, Амброджо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Биссоло, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бьяджо д’Антонио Туччи</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джованни да Удине</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Андреа Верроккьо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бьяджо д’Антонио Туччи</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Парентино, Бернардо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Веккьетта</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джорджоне</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Парентино, Бернардо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Веккьетта</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Андреа Верроккьо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Доменико Гирландайо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Джованни да Удине</a></li>
-							</ul>
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
 						</div>
 						<div class="catalogues__item-title">
 							<span class="catalogues__item-naming">C 1900 по 1999 гг.</span>
 							<div class="catalogues__item-icon"></div>
 						</div>
 						<div class="catalogues__item-content">
-							<ul class="catalogues__content-list">
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бенедетто ди Биндо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бонсиньори, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Боттичини, Рафаэлло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Веккьетта</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Андреа Верроккьо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Доменико Гирландайо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Грегорио ди Чекко</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Парентино, Бернардо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пезеллино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пьетро Перуджино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Перуцци, Бальдассаре</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пизанелло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Пинтуриккьо</a></li>
-							</ul>
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
 						</div>
 						<div class="catalogues__item-title">
 							<span class="catalogues__item-naming">C 2000 г.</span>
 							<div class="catalogues__item-icon"></div>
 						</div>
 						<div class="catalogues__item-content">
-							<ul class="catalogues__content-list">
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бенедетто ди Биндо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бергоньоне, Амброджо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Биссоло, Франческо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Больтраффио, Джованни</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Боттичини, Рафаэлло</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Брамантино</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бреа, Людовико</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Бьяджо д’Антонио Туччи</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Веккьетта</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Андреа Верроккьо</a></li>
-								<li class="catalogues__content-item">
-									<a class="catalogues__content-link" href="#no_scroll">Доменико Гирландайо</a></li>
-							</ul>
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="catalogues__body">
+					<div class="catalogues__content">
+						<div class="catalogues__portrait">
+						</div>
+						<div class="catalogues__naming">Что мы о нём знаем?</div>
+						<p class="catalogues__content-desc">Пока ничего... Зато мы точно знаем, что в галерее есть на что
+							посмотреть!</p>
+						<a href="#gellery" class="catalogues__link">В галерею</a>
+					</div>
+					<div class="catalogues__accordion">
+						<div class="catalogues__item-title">
+							<span class="catalogues__item-naming">C 1400 по 1499 гг.</span>
+							<div class="catalogues__item-icon">
+							</div>
+						</div>
+						<div class="catalogues__item-content">
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalogues__item-title">
+							<span class="catalogues__item-naming">C 1500 по 1599 гг.</span>
+							<div class="catalogues__item-icon"></div>
+						</div>
+						<div class="catalogues__item-content">
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalogues__item-title">
+							<span class="catalogues__item-naming">C 1600 по 1699 гг.</span>
+							<div class="catalogues__item-icon"></div>
+						</div>
+						<div class="catalogues__item-content">
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalogues__item-title">
+							<span class="catalogues__item-naming">C 1700 по 1799 гг.</span>
+							<div class="catalogues__item-icon"></div>
+						</div>
+						<div class="catalogues__item-content">
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalogues__item-title">
+							<span class="catalogues__item-naming">C 1800 по 1899 гг.</span>
+							<div class="catalogues__item-icon"></div>
+						</div>
+						<div class="catalogues__item-content">
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalogues__item-title">
+							<span class="catalogues__item-naming">C 1900 по 1999 гг.</span>
+							<div class="catalogues__item-icon"></div>
+						</div>
+						<div class="catalogues__item-content">
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
+						</div>
+						<div class="catalogues__item-title">
+							<span class="catalogues__item-naming">C 2000 г.</span>
+							<div class="catalogues__item-icon"></div>
+						</div>
+						<div class="catalogues__item-content">
+							<div class="catalogues__placeholder-item">
+								<div class="catalogues__placeholder-img"></div>
+								<div class="catalogues__placeholder-desc">
+									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное для
+										себя</p>
+									<a href="#gellery" class="link catalogues__placeholder-link">В галерею</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -736,7 +791,8 @@
 				<div class="events__content swiper-container">
 					<div class="events__wrapper swiper-wrapper">
 						<div class="events__card swiper-slide">
-							<div class="events__image"></div>
+							<img loading="lazy" class="events__image" src="img/image/events-1.jpg"
+								srcset="img/image/events-lg-1.jpg 317w, img/image/events-1 500w" alt="">
 							<div class="events__card-content">
 								<address class="events__meta">
 									<span class="events__meta-location">Музей им. Щусева</span><br>
@@ -749,7 +805,8 @@
 							</div>
 						</div>
 						<div class="events__card swiper-slide">
-							<div class="events__image"></div>
+							<img loading="lazy" class="events__image" src="img/image/events-1.jpg"
+								srcset="img/image/events-lg-1.jpg 317w, img/image/events-1 500w" alt="">
 							<div class="events__card-content">
 								<address class="events__meta">
 									<span class="events__meta-location">ММОМА</span><br>
@@ -762,7 +819,8 @@
 							</div>
 						</div>
 						<div class="events__card swiper-slide">
-							<div class="events__image"></div>
+							<img loading="lazy" class="events__image" src="img/image/events-1.jpg"
+								srcset="img/image/events-lg-1.jpg 317w, img/image/events-1 500w" alt="">
 							<div class="events__card-content">
 								<address class="events__meta">
 									<span class="events__meta-location">Еврейский музей</span><br>
@@ -775,7 +833,8 @@
 							</div>
 						</div>
 						<div class="events__card swiper-slide">
-							<div class="events__image"></div>
+							<img loading="lazy" class="events__image" src="img/image/events-1.jpg"
+								srcset="img/image/events-lg-1.jpg 317w, img/image/events-1 500w" alt="">
 							<div class="events__card-content">
 								<address class="events__meta">
 									<span class="events__meta-location">Третьяковка на Крымском валу</span><br>
@@ -789,7 +848,8 @@
 							</div>
 						</div>
 						<div class="events__card swiper-slide">
-							<div class="events__image"></div>
+							<img loading="lazy" class="events__image" src="img/image/events-1.jpg"
+								srcset="img/image/events-lg-1.jpg 317w, img/image/events-1 500w" alt="">
 							<div class="events__card-content">
 								<address class="events__meta">
 									<span class="events__meta-location">ММАМ</span><br>
@@ -968,31 +1028,31 @@
 					<div class="projects__slider swiper-container">
 						<div class="projects__wrapper swiper-wrapper">
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-1.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-1.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-2.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-2.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-3.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-3.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-4.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-4.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-5.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-5.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-6.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-6.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-7.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-7.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-8.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-8.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 							<div class="projects__slide swiper-slide">
-								<img class="projects__slide-img" src="img/logo/projects-9.png" alt="Логотип партнёра">
+								<img class="projects__slide-img" src="img/logo/projects-9.png" loading="lazy" alt="Логотип партнёра">
 							</div>
 						</div>
 					</div>

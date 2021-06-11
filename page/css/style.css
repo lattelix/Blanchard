@@ -9,7 +9,7 @@ body::-webkit-scrollbar {
 	--c-gray-el: #CACACA;
 	--c-control-el: #ECECEC;
 	--c-purple: #9D5CD0;
-	--c-click-link: #7943A4;
+	--c-darken-purple: #7943A4;
 	--с-dark-link: #C283F3;
 	--c-btn-border: #D1A9F0;
 	--s-sm-text: 1rem;
@@ -66,6 +66,18 @@ h2 {
 	font-weight: normal;
 }
 
+h3 {
+	margin: 0;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 133%;
+}
+
+.link {
+	font-weight: 600;
+	color: var(--c-purple);
+}
+
 .btn {
 	display: inline-block;
 	font-weight: 700;
@@ -74,8 +86,6 @@ h2 {
 	padding: 23px 35px;
 	border-radius: 100px;
 }
-
-.link {}
 
 
 /* header */
@@ -341,11 +351,11 @@ header {
 	z-index: -1;
 }
 
-.hero__swiper-slide {
+.hero__slide {
 	width: 100%;
 }
 
-.hero__swiper-slide img {
+.hero__slide-img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -625,6 +635,12 @@ header {
 	height: 350px;
 }
 
+.gellery__slide-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .gellery__warn-mobile {
 	display: none;
 }
@@ -650,17 +666,64 @@ header {
 .catalogues__tab {}
 
 .catalogues__tab-btn {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 0;
 	height: 66px;
 	width: 66px;
 	border-radius: 50%;
-	border: none;
-	border: 2px solid var(--c-purple);
+	border: 0px solid transparent;
 	background: none;
+	transition: border .25s;
 }
 
-.catalogues__tab-img {}
+.catalogues__tab-active {
+	border: 2px solid var(--c-darken-purple);
+}
+
+.catalogues__tab-btn:focus {
+	outline: none;
+}
+
+.catalogues__tab-img {
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	border: 0px solid transparent;
+	transition: box-shadow .25s, border .1s;
+}
+
+.catalogues__tab-btn:focus .catalogues__tab-img {
+	box-shadow: 0px 0px 20px #9d5cd0b3;
+}
+
+.catalogues__tab-btn:hover .catalogues__tab-img {
+	box-shadow: 0px 0px 20px #9d5cd0b3;
+}
+
+.catalogues__tab-btn:active .catalogues__tab-img {
+	box-shadow: none;
+	border: 2px solid var(--c-darken-purple);
+}
+
+.catalogues__tab-active .catalogues__tab-img {
+	box-shadow: none;
+	border: 0px solid transparent;
+}
+
+.catalogues__tab-active:focus .catalogues__tab-img {
+	box-shadow: 0px 0px 20px #9d5cd0b3;
+}
+
+.catalogues__tab-active:hover .catalogues__tab-img {
+	box-shadow: 0px 0px 20px #9d5cd0b3;
+}
+
+.catalogues__tab-active:active .catalogues__tab-img {
+	box-shadow: none;
+	border: 2px solid var(--c-darken-purple);
+}
 
 .catalogues__subheading-desc {
 	max-width: 1080px;
@@ -669,21 +732,25 @@ header {
 }
 
 .catalogues__body {
+	display: none;
+}
+
+.catalogues__body-active {
 	display: flex;
 	gap: 50px;
 }
 
 .catalogues__content {
-	max-width: 750px;
+	flex: 0 1 750px;
 }
 
 .catalogues__portrait {
 	height: 470px;
-	max-height: 470px;
+	width: 100%;
+	background: no-repeat center url('../img/image/empty-art.svg');
 }
 
-.catalogues__portrait img {
-	display: block;
+.catalogues__portrait-img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
@@ -692,6 +759,7 @@ header {
 .catalogues__naming {
 	margin-top: 30px;
 	font-size: 24px;
+	font-weight: 600;
 	line-height: 32px;
 	letter-spacing: 0.72px;
 }
@@ -705,10 +773,38 @@ header {
 
 .catalogues__content-desc {
 	margin: 6px 0;
+	max-width: fit-content;
+}
+
+.catalogues__placeholder-item {
+	display: flex;
+	gap: 24px;
+}
+
+.catalogues__placeholder-img {
+	width: 275px;
+	height: 189px;
+	background: no-repeat center/contain url(../img/image/catalogues-placeholder.svg);
+}
+
+.catalogues__placeholder-desc {
+	max-width: 275px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+}
+
+.catalogues__placeholder-text {
+	line-height: 22px;
+}
+
+.catalogues__placeholder-link {
+	line-height: 22px;
 }
 
 .catalogues__accordion {
-	width: 100%;
+	flex: 0 1 750px;
 }
 
 .catalogues__item {
@@ -793,13 +889,8 @@ header {
 }
 
 .catalogues__content-list {
-	width: fit-content;
-	display: grid;
-	justify-items: start;
-	grid-auto-flow: row;
-	grid-template: repeat(9, auto) / repeat(3, auto);
-	grid-column-gap: 60px;
-	max-height: 300px;
+	/* width: fit-content; */
+	columns: 3;
 }
 
 .catalogues__content-item {
@@ -961,7 +1052,7 @@ header {
 .events__card-title {
 	margin: 4px 30px 0 0;
 	font-size: 24px;
-	font-weight: normal;
+	font-weight: 600;
 	line-height: 33px;
 	letter-spacing: 0.55px;
 	margin-inline-start: 1px;
@@ -1312,6 +1403,7 @@ header {
 }
 
 .projects__slide-img {
+	max-width: 100%;
 	transform: scale(1.17) translate(1px, 0px);
 	filter: grayscale(1) brightness(2%) invert(0.8);
 	transition: filter .25s;

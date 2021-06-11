@@ -5,7 +5,7 @@
   font-weight: 400;
   src: url('../fonts/open-sans-v18-latin_cyrillic-regular.eot');
   /* IE9 Compat Modes */
-  src: local(''),
+  src: local('open-sans-regular'), local('open sans regular'), local('OpenSans-Regular'),
     url('../fonts/open-sans-v18-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */
     url('../fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'),
@@ -16,6 +16,7 @@
     /* Safari, Android, iOS */
     url('../fonts/open-sans-v18-latin_cyrillic-regular.svg#OpenSans') format('svg');
   /* Legacy iOS */
+  font-display: swap;
 }
 
 /* open-sans-600 - latin_cyrillic */
@@ -25,7 +26,7 @@
   font-weight: 600;
   src: url('../fonts/open-sans-v18-latin_cyrillic-600.eot');
   /* IE9 Compat Modes */
-  src: local(''),
+  src: local('open-sans-600'), local('open-sans 600'), local('OpenSans-SemiBold'), local('OpenSans SemiBold'),
     url('../fonts/open-sans-v18-latin_cyrillic-600.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */
     url('../fonts/open-sans-v18-latin_cyrillic-600.woff2') format('woff2'),
@@ -36,6 +37,7 @@
     /* Safari, Android, iOS */
     url('../fonts/open-sans-v18-latin_cyrillic-600.svg#OpenSans') format('svg');
   /* Legacy iOS */
+  font-display: swap;
 }
 
 /* open-sans-700 - latin_cyrillic */
@@ -45,7 +47,7 @@
   font-weight: 700;
   src: url('../fonts/open-sans-v18-latin_cyrillic-700.eot');
   /* IE9 Compat Modes */
-  src: local(''),
+  src: local('open-sans-700'), local('open-sans 700'), local('OpenSans-Bold'), local('OpenSans Bold'),
     url('../fonts/open-sans-v18-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */
     url('../fonts/open-sans-v18-latin_cyrillic-700.woff2') format('woff2'),
@@ -56,4 +58,5 @@
     /* Safari, Android, iOS */
     url('../fonts/open-sans-v18-latin_cyrillic-700.svg#OpenSans') format('svg');
   /* Legacy iOS */
+  font-display: swap;
 }
