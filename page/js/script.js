@@ -1,7 +1,28 @@
+//* header dropdown
+
+document.querySelectorAll('.header__category-heading').forEach(function (dropEl) {
+	dropEl.addEventListener('click', function (event) {
+		const dropPath = event.currentTarget.dataset.path
+		if (this.classList.contains('drop-el-active')) {
+			this.classList.remove('drop-el-active');
+			document.querySelector(`[data-dropget="${dropPath}"]`).classList.remove('drop-open');
+		} else {
+			document.querySelectorAll('.header__category-heading').forEach(function (dropEl) {
+				dropEl.classList.remove('drop-el-active');
+			});
+			this.classList.add('drop-el-active');
+			document.querySelectorAll('.header__dropdown').forEach(function (dropBody) {
+				dropBody.classList.remove('drop-open');
+			})
+			document.querySelector(`[data-dropget="${dropPath}"]`).classList.add('drop-open');
+		}
+	})
+});
+
+
 //* hero slider
 
 const heroSlider = new Swiper('.hero__swiper-container', {
-
 	loop: true,
 	slidesPerView: 1,
 	effect: "fade",
@@ -16,37 +37,30 @@ const heroSlider = new Swiper('.hero__swiper-container', {
 });
 
 
-//* gellery filter (select)
+//* gallery filter (select)
 
-const element = document.querySelector('.gellery__filter-select');
+const element = document.querySelector('.gallery__filter-select');
 const choices = new Choices(element, {
 	searchEnabled: false,
 });
 
 
+//* gallery slider
 
-
-//* gellery slider
-
-const gellerySlider = new Swiper('.gellery__slider', {
-	slidesPerView: 3,
-	slidesPerColumn: 2,
-	slidesPerGroup: 3,
-	spaceBetween: 50,
-	// preloadImages: false,
-	// lazy: true,
-	// loadPrevNext: true,
-	// loadPrevNextAmount: 6,
+const gallerySlider = new Swiper('.gallery__slider', {
 	pagination: {
-		el: ".gellery__swiper-pagination",
+		el: ".gallery__swiper-pagination",
 		type: "fraction",
 		clickable: false,
 	},
 	navigation: {
-		nextEl: '.gellery__swiper-button-next',
-		prevEl: '.gellery__swiper-button-prev',
+		nextEl: '.gallery__swiper-button-next',
+		prevEl: '.gallery__swiper-button-prev',
 	},
-	breakpont: {
+	a11y: {
+		enabled: true,
+	},
+	breakpoints: {
 		320: {
 			slidesPerView: 1,
 			slidesPerColumn: 1,
@@ -71,29 +85,19 @@ const gellerySlider = new Swiper('.gellery__slider', {
 
 //* catalogues tabs
 
-// document.querySelectorAll('.tabs__btn').forEach(function (tabsBtn) {
-// 	tabsBtn.addEventListener('click', function (event) {
-// 		document.querySelectorAll('.tabs__btn').forEach(function (tabs_btn) {
-// 			tabs_btn.classList.remove('tab-active');
-// 		});
-
-// 		this.classList.add('tab-active');
-
-
-// 		const path = event.currentTarget.dataset.path
-
-// 		document.querySelectorAll('.tab-content').forEach(function (tabContent) {
-// 			tabContent.classList.remove('tab-content-active');
-// 		})
-// 		document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active');
-
-
-// 		document.querySelectorAll('.how__slider-img').forEach(function (tabsBtn) {
-// 			tabsBtn.classList.remove('tab-img-active');
-// 		})
-// 		document.querySelector(`[data-image="${path}"]`).classList.add('tab-img-active');
-// 	})
-// })
+document.querySelectorAll('.catalogues__tab-btn').forEach(function (tabsBtn) {
+	tabsBtn.addEventListener('click', function (event) {
+		document.querySelectorAll('.catalogues__tab-btn').forEach(function (tabs_btn) {
+			tabs_btn.classList.remove('catalogues__tab-active');
+		});
+		this.classList.add('catalogues__tab-active');
+		const tabPath = event.currentTarget.dataset.tab_path
+		document.querySelectorAll('.catalogues__body').forEach(function (tabContent) {
+			tabContent.classList.remove('catalogues__body-active');
+		})
+		document.querySelector(`[data-target="${tabPath}"]`).classList.add('catalogues__body-active');
+	})
+})
 
 
 //* catalogues accordion
@@ -107,17 +111,38 @@ $(function () {
 });
 
 
+//* events slider
+
+document.addEventListener('DOMContentLoaded', function () {
+	let windowWidth = window.innerWidth;
+
+	if (windowWidth < 768) {
+		const eventsSlider = new Swiper('.events__content', {
+			pagination: {
+				el: ".events__pagination",
+				clickable: true,
+			},
+			centeredSlides: true,
+			slidesPerView: 1,
+			spaceBetween: 50,
+			loop: true,
+		});
+	} else {}
+});
+
+
 //* projects partners slider
 
 const projectsSlider = new Swiper('.projects__slider', {
 	loop: true,
-	slidesPerView: 3,
-	spaceBetween: 50,
 	navigation: {
 		nextEl: '.projects__button-next',
 		prevEl: '.projects__button-prev',
 	},
-	breakpont: {
+	a11y: {
+		enabled: true,
+	},
+	breakpoints: {
 		320: {
 			slidesPerView: 1,
 			spaceBetween: 34,
@@ -130,5 +155,83 @@ const projectsSlider = new Swiper('.projects__slider', {
 			slidesPerView: 3,
 			spaceBetween: 50,
 		},
+	},
+});
+
+
+//* publications slider
+
+const publicationsSlider = new Swiper('.publications__slider', {
+	pagination: {
+		el: ".publications__swiper-pagination",
+		type: "fraction",
+		clickable: false,
+	},
+	navigation: {
+		nextEl: '.publications__swiper-next',
+		prevEl: '.publications__swiper-prev',
+	},
+	breakpoints: {
+		320: {
+			enabled: false,
+		},
+		768: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+			spaceBetween: 34,
+		},
+		1024: {
+			spaceBetween: 50,
+		},
+		1600: {
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+			spaceBetween: 50,
+		},
+	},
+});
+
+// let input = document.querySelector('.publications__price-input')
+
+// Document.
+
+
+//* contacts input mask
+
+var selector = document.querySelector("input[type='tel']");
+var im = new Inputmask("+7 (999) 999-99-99");
+im.mask(selector);
+
+new JustValidate('.contacts__form', {
+	rules: {
+		name: {
+			required: true,
+			minLength: 3,
+			maxLength: 16,
+		},
+		tel: {
+			required: true,
+			function: (name, value) => {
+				const phone = selector.inputmask.unmaskedvalue()
+				return Number(phone) && phone.length === 10
+			}
+		}
+	},
+	messages: {
+		name: 'Недопустимый формат',
+		tel: 'Недопустимый формат'
+	},
+
+	submitHandler: function (form, values, ajax) {
+
+		ajax({
+			url: 'https://just-validate-api.herokuapp.com/submit',
+			method: 'POST',
+			data: values,
+			async: true,
+			callback: function (response) {
+				console.log(response)
+			}
+		});
 	},
 });
