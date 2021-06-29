@@ -19,6 +19,18 @@ document.querySelectorAll('.header__category-heading').forEach(function (dropEl)
 	})
 });
 
+// ToDo (optional function, it's function delete drop-body for invite user expirients)
+// document.querySelectorAll('.header__dropdown').forEach(function (dropOut) {
+// 	dropOut.addEventListener('mouseout', function (event) {
+// 		document.querySelectorAll('.header__category-heading').forEach(function (dropEl) {
+// 			dropEl.classList.remove('drop-el-active');
+// 		});
+// 		document.querySelectorAll('.header__dropdown').forEach(function (dropBody) {
+// 			dropBody.classList.remove('drop-open');
+// 		})
+// 	})
+// });
+
 
 //* hero slider
 
@@ -67,13 +79,13 @@ const gallerySlider = new Swiper('.gallery__slider', {
 			slidesPerGroup: 1,
 			spaceBetween: 34,
 		},
-		768: {
+		576: {
 			slidesPerView: 2,
 			slidesPerColumn: 2,
 			slidesPerGroup: 2,
 			spaceBetween: 34,
 		},
-		1200: {
+		1440: {
 			slidesPerView: 3,
 			slidesPerColumn: 2,
 			slidesPerGroup: 3,
@@ -113,28 +125,26 @@ $(function () {
 
 //* events slider
 
-document.addEventListener('DOMContentLoaded', function () {
-	let windowWidth = window.innerWidth;
-
-	if (windowWidth < 768) {
-		const eventsSlider = new Swiper('.events__content', {
-			pagination: {
-				el: ".events__pagination",
-				clickable: true,
-			},
-			centeredSlides: true,
-			slidesPerView: 1,
-			spaceBetween: 50,
-			loop: true,
-		});
-	} else {}
+const eventsSlider = new Swiper('.events__content', {
+	pagination: {
+		el: ".events__pagination",
+		clickable: true,
+	},
+	centeredSlides: true,
+	slidesPerView: 1,
+	spaceBetween: 100,
+	breakpoints: {
+		576: {
+			spaceBetween: 0,
+			enabled: false
+		},
+	},
 });
 
 
 //* projects partners slider
 
 const projectsSlider = new Swiper('.projects__slider', {
-	loop: true,
 	navigation: {
 		nextEl: '.projects__button-next',
 		prevEl: '.projects__button-prev',
