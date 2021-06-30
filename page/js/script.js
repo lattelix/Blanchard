@@ -69,9 +69,6 @@ const gallerySlider = new Swiper('.gallery__slider', {
 		nextEl: '.gallery__swiper-button-next',
 		prevEl: '.gallery__swiper-button-prev',
 	},
-	a11y: {
-		enabled: true,
-	},
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -142,6 +139,57 @@ const eventsSlider = new Swiper('.events__content', {
 });
 
 
+//* events all-btn
+
+document.querySelector('.events__all-btn').addEventListener('click', function () {
+	// this.classList.add('events__all-hidden');
+	this.style.display = "none";
+	document.querySelectorAll('.events__card').forEach(function (eventsCard) {
+		eventsCard.style.display = "block";
+		// eventsCard.classList.add('events__card-active');
+	})
+})
+
+
+//* publications slider
+
+const publicationsSlider = new Swiper('.publications__slider', {
+	pagination: {
+		el: ".publications__swiper-pagination",
+		type: "fraction",
+		clickable: false,
+	},
+	navigation: {
+		nextEl: '.publications__swiper-next',
+		prevEl: '.publications__swiper-prev',
+	},
+	breakpoints: {
+		320: {
+			enabled: false,
+		},
+		768: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+			spaceBetween: 34,
+		},
+		1024: {
+			slidesPerView: 2,
+			slidesPerGroup: 2,
+			spaceBetween: 50,
+		},
+		1400: {
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+			spaceBetween: 50,
+		},
+	},
+});
+
+// let input = document.querySelector('.publications__price-input')
+
+// Document.
+
+
 //* projects partners slider
 
 const projectsSlider = new Swiper('.projects__slider', {
@@ -167,43 +215,6 @@ const projectsSlider = new Swiper('.projects__slider', {
 		},
 	},
 });
-
-
-//* publications slider
-
-const publicationsSlider = new Swiper('.publications__slider', {
-	pagination: {
-		el: ".publications__swiper-pagination",
-		type: "fraction",
-		clickable: false,
-	},
-	navigation: {
-		nextEl: '.publications__swiper-next',
-		prevEl: '.publications__swiper-prev',
-	},
-	breakpoints: {
-		320: {
-			enabled: false,
-		},
-		768: {
-			slidesPerView: 2,
-			slidesPerGroup: 2,
-			spaceBetween: 34,
-		},
-		1024: {
-			spaceBetween: 50,
-		},
-		1600: {
-			slidesPerView: 3,
-			slidesPerGroup: 3,
-			spaceBetween: 50,
-		},
-	},
-});
-
-// let input = document.querySelector('.publications__price-input')
-
-// Document.
 
 
 //* contacts input mask
