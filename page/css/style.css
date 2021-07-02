@@ -292,6 +292,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	min-height: 100px;
+	gap: 45px;
 }
 
 .header__burger {
@@ -391,14 +392,15 @@ header {
 	transform: translate(0px, 3px);
 }
 
-.header__nav {}
-
 .header__nav-list {
 	margin-top: -1px;
 	align-self: center;
 	display: flex;
 	justify-content: space-between;
-	gap: 50.3px;
+}
+
+.header__nav-item:not(:first-child) {
+	margin-left: calc(3.66vw - 20px);
 }
 
 .header__nav-link {
@@ -411,9 +413,9 @@ header {
 	margin-top: -1px;
 	margin-right: -7px;
 	letter-spacing: -0.6px;
-	margin-left: 94px;
-	display: inline-block;
-	text-align: end;
+	display: inline-flex;
+	flex: 0 1 168px;
+	justify-content: flex-end;
 	cursor: pointer;
 	padding: 0 6px;
 }
@@ -423,8 +425,8 @@ header {
 }
 
 .header__login-icon {
-	margin-right: 4px;
-	margin-top: 1px;
+	margin-right: 8px;
+	margin-top: 6px;
 }
 
 .header__login path {
@@ -453,12 +455,14 @@ header {
 .header__category-list {
 	display: flex;
 	justify-content: space-between;
-	gap: 88px;
+	/* gap: 88px; */
 	margin-left: -3px;
 }
 
 .header__category-item {
 	position: relative;
+	/* margin-left: calc(5.63vw - 20px); */
+	margin-left: calc(7.71vw - 60px);
 }
 
 .header__category-heading {
