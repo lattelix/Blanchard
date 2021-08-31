@@ -1768,22 +1768,10 @@ header {
 	width: 100%;
 }
 
-/*todo (mode: slider)
-&swiper-container
-.events__content {
-	position: relative;
-	overflow: hidden;
-} */
-
 .events__wrapper {
-	/* justify-content: space-between; */
 	column-gap: 50px;
 }
 
-/*todo (mode: slider)
-&swiper-wrapper
- .events__wrapper {
-} */
 /*todo (event: all-card)
 &swiper-wrapper
  .events__wrapper {
@@ -1793,21 +1781,14 @@ header {
 	column-gap: 50px;
 } */
 
-.events__card {
-	flex: 0 1 31.3%;
-	max-width: 500px;
-	min-width: 400px;
-}
-
 /* .events__card:nth-child(4),
 .events__card:nth-child(5) {
 	display: none;
-} */
+}*/
 
-/*todo (event: all-card)
-&swiper-wrapper
- .events__card {
-} */
+.events__card {
+	display: none;
+}
 
 .events__image {
 	display: block;
@@ -1965,22 +1946,16 @@ header {
 
 	.events__card {
 		flex: 1 1 290px;
-		max-width: 500px;
+		/* max-width: 500px; */
+		max-width: 700px;
 		min-width: 290px;
 	}
 
-	.events__card:nth-child(3),
-	.events__card:nth-child(4),
-	.events__card:nth-child(5) {
-		/* .events__card { */
-		display: none;
+	/* .events__card:nth-child(1), */
+	/* .events__card:nth-child(2) { */
+	.events__card:nth-child(1) {
+		display: block;
 	}
-
-	/*!! (max-width: 992px)  */
-	/* .events__card {
-		max-width: 317px;
-		min-width: 290px;
-	} */
 
 	.events__card-content {
 		padding-left: 34px;
@@ -2001,11 +1976,33 @@ header {
 	}
 }
 
+@media (min-width: 720px) {
+
+	.events__card {
+		flex: 1 1 290px;
+		/* max-width: 500px; */
+		max-width: 700px;
+		min-width: 290px;
+	}
+
+	.events__card:nth-child(2) {
+		display: block;
+	}
+}
+
 @media (min-width: 992px) {
 	.events__wrapper {
 		gap: 27px;
 	}
 
+	.events__card {
+		flex: 1 1 278px;
+		max-width: 500px;
+		min-width: 278px;
+	}
+
+	/* .events__card:nth-child(1),
+	.events__card:nth-child(2), */
 	.events__card:nth-child(3) {
 		display: block;
 	}
@@ -2024,10 +2021,6 @@ header {
 		gap: 50px;
 	}
 
-	.events__card {
-		min-width: 400px;
-	}
-
 	.events__card-content {
 		padding-left: 50px;
 		min-height: 400px;
@@ -2044,6 +2037,13 @@ header {
 	.events__card-more {
 		margin-bottom: 38px;
 		transform: translate(-7px, 0px);
+	}
+}
+
+@media (min-width: 1360px) {
+
+	.events__card {
+		min-width: 400px;
 	}
 }
 
