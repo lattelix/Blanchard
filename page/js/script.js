@@ -166,13 +166,17 @@ const publicationsSlider = new Swiper('.publications__slider', {
 	breakpoints: {
 		320: {
 			enabled: false,
+			slidesPerView: 0,
+			slidesPerGroup: 0,
+			spaceBetween: 0,
 		},
-		768: {
+		576: {
+			enabled: true,
 			slidesPerView: 2,
 			slidesPerGroup: 2,
 			spaceBetween: 34,
 		},
-		1024: {
+		992: {
 			slidesPerView: 2,
 			slidesPerGroup: 2,
 			spaceBetween: 50,
@@ -185,7 +189,100 @@ const publicationsSlider = new Swiper('.publications__slider', {
 	},
 });
 
-// let input = document.querySelector('.publications__price-input')
+// if (window.innerWidth < 577) {
+// 	const array = document.getElementsByClassName('publications__checkbox');
+// 	array.forEach(item => {
+// 		this.addEventListener('change', function () {
+// 			if (this.checked) {
+// 				this.parentNode.classList.add('active');
+// 			} else {
+// 				this.parentNode.classList.remove('active');
+// 			}
+// 		});
+// 	});
+// 	const arrayLabel = document.getElementsByClassName('publications__label');
+// 	let slideHeading = document.querySelector('.publications__prescription');
+// 	let slideArrow = document.querySelector('.publications__prescription-arrow');
+// 	slideHeading.addEventListener('click', function () {
+// 		console.log('click');
+// 		this.classList.toggle('active');
+// 		slideArrow.classList.toggle('active');
+// 		if (this.classList.contains('active')) {
+// 			for (index in arrayLabel) {
+// 				const element = arrayLabel[index];
+// 				if (element.classList.contains('active') == false) {
+// 					element.style.display = "none";
+// 				}
+// 			}
+// 		} else {
+// 			for (index in arrayLabel) {
+// 				const element = arrayLabel[index];
+// 				element.style.display = "block";
+// 			}
+// 		}
+// 	});
+// }
+
+function checkboxToggle() {
+	let btn = document.querySelector(".publications__prescription");
+	let labels = document.querySelectorAll(".publications__label");
+	let listLabels = document.querySelector(".publications__filter");
+	console.log(btn)
+	console.log(labels)
+	console.log(listLabels)
+	btn.addEventListener("click", toggleSpoiler);
+	btn.addEventListener("keyup", function (e) {
+		console.log(e.key);
+		if (e.code === "Enter") {
+			toggleSpoiler();
+		}
+	})
+
+	function toggleSpoiler() {
+		if (!listLabels.classList.contains("prescription-active")) {
+			listLabels.classList.add("prescription-active");
+			labels.forEach(item => {
+				// item.classList.add("publications__label-active");
+				animationItem(item, "publications__label-active", "animation-test", "add");
+			})
+		} else {
+			listLabels.classList.remove("publications__filter-active");
+			labels.forEach(item => {
+				if (item.querySelector(".checkbox").checked) {
+					animationItem(item, "publications__label-active", "animation-test", "add");
+				} else {
+					animationItem(item, "publications__label-active", "animation-test", "remove");
+				}
+			});
+		}
+		labels.forEach(item => {
+			item.addEventListener("click", function () {
+				if (!listLabels.classList.contains("publications__filter-active")) {
+					animationItem(this, "publications__label-active", "animation-test", "remove");
+				}
+			});
+		})
+	}
+
+	function animationItem(item, class1, class2, f) {
+		if (f === "add") {
+			item.classList.add(class1);
+			setTimeout(function () {
+				item.classList.add(class2)
+			}, 100);
+
+		} else {
+			item.classList.remove(class2);
+			setTimeout(function () {
+				item.classList.remove(class1)
+			}, 300);
+		}
+	}
+}
+
+checkboxToggle()
+
+
 
 // Document.
 
