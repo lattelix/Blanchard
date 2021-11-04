@@ -1,35 +1,39 @@
 //* header dropdown
 
-document.querySelectorAll('.header__category-heading').forEach(function (dropEl) {
-	dropEl.addEventListener('click', function (event) {
-		const dropPath = event.currentTarget.dataset.path
-		if (this.classList.contains('drop-el-active')) {
-			this.classList.remove('drop-el-active');
-			document.querySelector(`[data-dropget="${dropPath}"]`).classList.remove('drop-open');
-		} else {
-			document.querySelectorAll('.header__category-heading').forEach(function (dropEl) {
-				dropEl.classList.remove('drop-el-active');
+document.addEventListener("DOMContentLoaded", function () {
+	document.querySelectorAll(".header__category-naming").forEach(item => {
+		item.addEventListener("click", function () {
+			let btn = this;
+			let dropdown = this.parentElement.querySelector(".header__dropdown");
+
+			document.querySelectorAll(".header__category-naming").forEach(el => {
+				if (el != btn) {
+					el.classList.remove("active-btn");
+				}
 			});
-			this.classList.add('drop-el-active');
-			document.querySelectorAll('.header__dropdown').forEach(function (dropBody) {
-				dropBody.classList.remove('drop-open');
+
+			document.querySelectorAll(".header__dropdown").forEach(el => {
+				if (el != dropdown) {
+					el.classList.remove("drop-open");
+				}
 			})
-			document.querySelector(`[data-dropget="${dropPath}"]`).classList.add('drop-open');
+			dropdown.classList.toggle("drop-open");
+			btn.classList.toggle("active-btn")
+		})
+	})
+
+	document.addEventListener("click", function (e) {
+		let target = e.target;
+		if (!target.closest(".header__category-list")) {
+			document.querySelectorAll(".header__dropdown").forEach(el => {
+				el.classList.remove("drop-open");
+			})
+			document.querySelectorAll(".header__category-naming").forEach(el => {
+				el.classList.remove("active-btn");
+			});
 		}
 	})
-});
-
-// ToDo (optional function, it's function delete drop-body for invite user expirients)
-// document.querySelectorAll('.header__dropdown').forEach(function (dropOut) {
-// 	dropOut.addEventListener('mouseout', function (event) {
-// 		document.querySelectorAll('.header__category-heading').forEach(function (dropEl) {
-// 			dropEl.classList.remove('drop-el-active');
-// 		});
-// 		document.querySelectorAll('.header__dropdown').forEach(function (dropBody) {
-// 			dropBody.classList.remove('drop-open');
-// 		})
-// 	})
-// });
+})
 
 
 //* hero slider
