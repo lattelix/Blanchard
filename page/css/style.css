@@ -424,7 +424,7 @@ header {
 	position: relative;
 	display: block;
 	width: 218px;
-	padding: 3px 0;
+	padding: 1px 0;
 	border: none;
 	border-bottom: 1px solid #ffffffd9;
 	background-color: transparent;
@@ -509,22 +509,6 @@ header {
 	margin-right: 4px;
 }
 
-.header__login path {
-	transition: fill .25s;
-}
-
-.header__login:focus:hover path {
-	fill: var(--white);
-}
-
-.header__login:hover path {
-	fill: var(--c-purple);
-}
-
-.header__login:active:focus path {
-	fill: var(--c-darken-purple);
-}
-
 .header__category {
 	display: flex;
 	justify-content: space-between;
@@ -561,6 +545,7 @@ header {
 
 .header__category-arrow {
 	padding-top: 3px;
+	box-sizing: initial;
 }
 
 .header__category-arrow path {
@@ -752,14 +737,6 @@ header {
 		margin-right: 7px;
 	}
 
-	.header__login:hover path {
-		fill: var(--white);
-	}
-
-	.header__login:active:focus path {
-		fill: var(--white);
-	}
-
 	.header__search-btn {
 		margin-top: 0;
 	}
@@ -884,8 +861,10 @@ header {
 }
 
 .hero__btn::after {
-	width: 106%;
-	height: 127%;
+	top: -7px;
+	right: -7px;
+	bottom: -7px;
+	left: -7px;
 }
 
 /* adaptive for hero */
@@ -1642,36 +1621,44 @@ header {
 	border-bottom: 1px solid transparent;
 	background: transparent;
 	transition: background-color .25s, color .25s, border .25s;
+	color: var(--c-main-text);
 }
 
 .catalogues__content-btn:focus {
 	color: var(--white);
-	background-color: var(--c-purple);
-	outline: none;
-}
-
-.catalogues__content-btn:hover {
-	color: var(--c-purple);
-	border-color: var(--c-purple);
 }
 
 .catalogues__content-btn:focus:hover {
-	color: var(--white);
-	border-color: var(--c-purple);
+	color: var(--c-purple);
 }
 
-.catalogues__content-btn:active {
-	color: var(--c-darken-purple);
-	border: 1px transparent;
+.catalogues__content-btn:focus:hover::before {
+	opacity: 0;
 }
 
-.catalogues__content-btn:active:focus {
+.catalogues__content-btn:active,
+.catalogues__content-btn:active:hover {
 	color: var(--c-darken-purple);
-	background-color: transparent;
 }
 
 .catalogues__content-btn::after {
-	content: none;
+	content: '';
+	position: absolute;
+	bottom: -6px;
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: var(--c-purple);
+	transition: opacity .25s; 
+	opacity: 0;
+}
+
+.catalogues__content-btn:hover::after {
+	opacity: 1;
+}
+
+.catalogues__content-btn:active::after {
+	opacity: 0;
 }
 
 /* adaptive for catalogues */
@@ -1899,7 +1886,7 @@ header {
 }
 
 .events__content {
-	margin-bottom: 49px;
+	margin-bottom: 50px;
 	overflow: visible;
 	width: 100%;
 }
@@ -2165,7 +2152,7 @@ header {
 	}
 
 	.events__card-more {
-		margin-bottom: 38px;
+		margin-bottom: 37px;
 		transform: translate(-7px, 0px);
 	}
 }
