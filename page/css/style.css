@@ -1394,6 +1394,26 @@ header {
 	border: 2px solid var(--c-darken-purple);
 }
 
+.catalogues__tab:nth-child(1) .catalogues__tab-img {
+	background-image: url("../img/icon/country-1.png");
+}
+
+.catalogues__tab:nth-child(2) .catalogues__tab-img {
+	background-image: url("../img/icon/country-2.png");
+}
+
+.catalogues__tab:nth-child(3) .catalogues__tab-img {
+	background-image: url("../img/icon/country-3.png");
+}
+
+.catalogues__tab:nth-child(4) .catalogues__tab-img {
+	background-image: url("../img/icon/country-4.png");
+}
+
+.catalogues__tab:nth-child(5) .catalogues__tab-img {
+	background-image: url("../img/icon/country-5.png");
+}
+
 .catalogues__subheading-desc {
 	max-width: 1080px;
 	margin-bottom: 39px;
@@ -1973,7 +1993,6 @@ header {
 }
 
 .events__card-more:focus {
-	background: var(--c-purple);
 	color: var(--white);
 }
 
@@ -1982,8 +2001,11 @@ header {
 }
 
 .events__card-more:hover {
-	background: transparent;
 	color: var(--c-darken-purple);
+}
+
+.events__card-more:hover::before {
+	opacity: 0;
 }
 
 .events__card-more:focus:hover {
@@ -2042,8 +2064,10 @@ header {
 } */
 
 .events__all-btn::after {
-	width: 110%;
-	height: 130%;
+	top: -8px;
+	right: -7px;
+	bottom: -6px;
+	left: -7px;
 	transform: translate(0, 1px);
 }
 
@@ -3103,8 +3127,10 @@ header {
 }
 
 .contacts__btn::after {
-	width: 111%;
-	height: 129%;
+	top: -7px;
+	right: -7px;
+	bottom: -7px;
+	left: -7px;
 	transition: border-color .25s;
 }
 
