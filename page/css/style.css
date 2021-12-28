@@ -64,6 +64,22 @@ body::-webkit-scrollbar {
 
 /* general styles */
 
+.visuallyhidden:not(:focus):not(:active) {
+	position: absolute;
+ 
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+ 
+	white-space: nowrap;
+ 
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+ }
+
 html {
 	scroll-behavior: smooth;
 }
@@ -2283,6 +2299,8 @@ header {
 .publications__prescription {
 	font-weight: bold;
 	line-height: 2;
+	cursor: pointer;
+	/* display: inline-block; */
 }
 
 .publications__filter {
@@ -2292,12 +2310,14 @@ header {
 	flex-direction: column;
 }
 
+.publications__filter-item {
+}
+
 .publications__label {
 	display: inline-flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
 	align-items: center;
-	cursor: pointer;
+	cursor: pointer;	
+	/* display: none; */
 }
 
 .publications__label:focus {
@@ -2305,25 +2325,54 @@ header {
 }
 
 .publications__checkbox-text {
-	order: -1;
 	transition: color .25s;
 }
 
-.publications__checkbox:checked~.publications__checkbox-text {
-	color: var(--с-light-purple);
+.publications__checkbox {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 12px;
+	width: 12px;
+	height: 12px;
+	border: 1px solid var(--white);
+	transition: border .25s;
+}
+
+.publications__checkbox:before {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 100%;
+	background: var(--с-light-purple);
+	opacity: 0;
+	transition: opacity .25s;
+}
+
+.publications__checkbox:checked:before {
+opacity: 1;
 }
 
 .publications__label:hover .publications__checkbox-text,
-.publications__label:focus .publications__checkbox-text {
+.publications__checkbox:focus-visible+.publications__checkbox-text {
 	color: var(--с-light-purple);
 }
 
-.publications__checkbox {
-	display: none;
+.publications__label:hover .publications__checkbox,
+.publications__checkbox:focus-visible {
+	border-color: var(--с-light-purple);
+}
+
+.publications__checkbox:checked+.publications__checkbox-text {
+	color: var(--с-light-purple);
+}
+
+.publications__checkbox:checked {
+	border-color: var(--с-light-purple);
 }
 
 .publications__checkbox-span {
-	display: inline-flex;
+	/* display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	margin-right: 12px;
@@ -2331,19 +2380,19 @@ header {
 	width: 12px;
 	height: 12px;
 	border: 1px solid var(--white);
-	transition: border .25s;
+	transition: border .25s; */
+	
+	/* position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 1px solid grey;
+	left: 0;
+	top: calc((100% - 13px) / 2);
+	
+	transition: border .2s ease-in-out; */
 }
 
-.publications__checkbox:checked~.publications__checkbox-span {
-	border: 1px solid var(--с-light-purple);
-}
-
-.publications__label:hover .publications__checkbox-span,
-.publications__label:focus .publications__checkbox-span {
-	border: 1px solid var(--с-light-purple);
-}
-
-.publications__checkbox-span::before {
+/* .publications__checkbox-span::before {
 	content: "";
 	display: block;
 	width: 4px;
@@ -2352,11 +2401,11 @@ header {
 	background: #C283F3;
 	transition: opacity .25s;
 	opacity: 0;
-}
+} */
 
-.publications__checkbox:checked+.publications__checkbox-span::before {
+/* .publications__checkbox:checked+.publications__checkbox-span::before {
 	opacity: 1;
-}
+} */
 
 .publications__close {
 	display: none;
@@ -2505,11 +2554,13 @@ header {
 	}
 
 	.publications__label {
-		display: inline-flex;
+		/* display: inline-flex;
 		flex-direction: row-reverse;
 		justify-content: flex-end;
 		align-items: center;
-		cursor: pointer;
+		cursor: pointer; */
+
+		/* === */
 		/* flex: 0 1 50%; */
 		/* width: 50%; */
 		/* min-width: 20%; */
@@ -2594,11 +2645,18 @@ header {
 	}
 
 	.publications__label {
+		/* === */
 		/* display: none; */
-		padding: 5px 0;
-		border-bottom: 1px solid #ffffff80;
+
+		/* padding: 5px 0;
+		border-bottom: 1px solid #ffffff80; */
+
+		/* === */
 		/* opacity: 0; */
-		transition: all .3s;
+
+		/* transition: all .3s; */
+
+		/* === */
 		/* animation: label_disable 500ms linear; */
 	}
 
@@ -2641,15 +2699,20 @@ header {
 
 
 	.publications__label-visible {
-		display: flex;
-		opacity: 1;
+		/* display: flex;
+		opacity: 1; */
+
+		/* === */
 		/* transition: all .3s; */
-		animation: label_enable 500ms linear;
+
+		/* animation: label_enable 500ms linear; */
 	}
 
 	.publications__label-active {
-		display: flex;
-		opacity: 1;
+		/* display: flex;
+		opacity: 1; */
+
+		/* === */
 		/* transition: all .3s; */
 		/* animation: label_enable 500ms linear; */
 	}

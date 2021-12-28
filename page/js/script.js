@@ -227,68 +227,77 @@ const publicationsSlider = new Swiper('.publications__slider', {
 // 	});
 // }
 
-function checkboxToggle() {
-	let btn = document.querySelector(".publications__prescription");
-	let labels = document.querySelectorAll(".publications__label");
-	let listLabels = document.querySelector(".publications__filter");
-	console.log(btn)
-	console.log(labels)
-	console.log(listLabels)
-	btn.addEventListener("click", toggleSpoiler);
-	btn.addEventListener("keyup", function (e) {
-		console.log(e.key);
-		if (e.code === "Enter") {
-			toggleSpoiler();
-		}
-	})
 
-	function toggleSpoiler() {
-		if (!listLabels.classList.contains("prescription-active")) {
-			listLabels.classList.add("prescription-active");
-			labels.forEach(item => {
-				// item.classList.add("publications__label-active");
-				animationItem(item, "publications__label-active", "animation-test", "add");
-			})
-		} else {
-			listLabels.classList.remove("publications__filter-active");
-			labels.forEach(item => {
-				if (item.querySelector(".checkbox").checked) {
-					animationItem(item, "publications__label-active", "animation-test", "add");
-				} else {
-					animationItem(item, "publications__label-active", "animation-test", "remove");
-				}
-			});
-		}
-		labels.forEach(item => {
-			item.addEventListener("click", function () {
-				if (!listLabels.classList.contains("publications__filter-active")) {
-					animationItem(this, "publications__label-active", "animation-test", "remove");
-				}
-			});
-		})
-	}
 
-	function animationItem(item, class1, class2, f) {
-		if (f === "add") {
-			item.classList.add(class1);
-			setTimeout(function () {
-				item.classList.add(class2)
-			}, 100);
 
-		} else {
-			item.classList.remove(class2);
-			setTimeout(function () {
-				item.classList.remove(class1)
-			}, 300);
-		}
-	}
+
+
+if (window.innerWidth < 577) {
+let button = ".publications__prescription";
+let labels = ".publications__label";
+let labelsList = ".publications__filter";
+let labelsListActive = "checklist-active";
+let labelActive = "checkbox--label-active";
+let animationClass = "animation-test";
+let inputCheckbox = ".publications__checkbox";
+
+function checkboxToggle(a, b, c, labelsListActive, labelActive, animationClass, inputCheckbox) {
+  let btn = document.querySelector(a);
+  let labels = document.querySelectorAll(b);
+  let listLabels = document.querySelector(c);
+btn.addEventListener("click", toggleSpoiler);
+  btn.addEventListener("keyup", function(e) {
+    console.log(e.key);
+    if (e.code === "Enter") {
+      toggleSpoiler();
+    }
+  })    
+function toggleSpoiler() {
+    if (!listLabels.classList.contains(labelsListActive)) {
+    listLabels.classList.add(labelsListActive);
+    labels.forEach(item => {
+     // item.classList.add("checkbox--label-active");
+      animationItem(item, labelActive, animationClass, "add");
+    })
+  } else {
+    listLabels.classList.remove(labelsListActive);
+    labels.forEach(item => {
+    	if (item.querySelector(inputCheckbox).checked) {
+    	animationItem(item, labelActive, animationClass, "add");
+      } else {
+        animationItem(item, labelActive, animationClass, "remove");
+      }
+      });
+  }
+  labels.forEach(item => {
+    item.addEventListener("click", function() {
+      if (!listLabels.classList.contains(labelsListActive)) {
+        animationItem(this, labelActive, animationClass, "remove");
+      }
+    });
+  })
+}
+function animationItem(item, class1, class2, f) {
+ if (f === "add") {
+    item.classList.add(class1);
+  setTimeout(function() {
+    item.classList.add(class2)
+  }, 100);
+
+ } else {
+     item.classList.remove(class2);
+  setTimeout(function() {
+    item.classList.remove(class1)
+  }, 300);
+  }
+}
 }
 
-checkboxToggle()
+
+checkboxToggle(button, labels, labelsList, labelsListActive, labelActive, animationClass, inputCheckbox);
+};
 
 
-
-// Document.
 
 
 //* projects partners slider
