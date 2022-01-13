@@ -113,10 +113,33 @@ document.querySelectorAll('.catalogues__tab-btn').forEach(function (tabsBtn) {
 })
 
 
+document.querySelectorAll(".tab-content").forEach((item) => {
+	// let btns = item.find(".ac--list__iten-tab");
+	let btns = item.querySelectorAll(".catalogues__content-btn");
+	let articles = item.querySelectorAll(".catalogues__content");
+	btns.forEach((el) => {
+	  el.addEventListener("click", function (e) {
+		 let path = e.currentTarget.dataset.path;
+		 let tabCont = item.querySelector(`[data-target='${path}']`);
+		 console.log(tabCont);
+		 articles.forEach((el) => {
+			el.classList.remove("article-tabActive");
+		 });
+		 btns.forEach((el) => {
+			el.classList.remove("article-btn-active");
+		 });
+		 tabCont.classList.add("article-tabActive");
+		 this.classList.add("article-btn-active");
+	  });
+	});
+ });
+
+
 //* catalogues accordion
 
 $(function () {
 	$(".catalogues__accordion").accordion({
+      icons: false,
 		heightStyle: "content",
 		collapsible: true,
 		active: 0
@@ -233,68 +256,73 @@ const publicationsSlider = new Swiper('.publications__slider', {
 
 
 if (window.innerWidth < 577) {
-let button = ".publications__prescription";
-let labels = ".publications__label";
-let labelsList = ".publications__filter";
-let labelsListActive = "checklist-active";
-let labelActive = "checkbox--label-active";
-let animationClass = "animation-test";
-let inputCheckbox = ".publications__checkbox";
+   console.log("🚀")
+	let button = ".publications__prescription";
+	let labels = ".publications__label";
+	let labelsList = ".publications__filter";
+	let labelsListActive = "checklist-active";
+	let labelActive = "publications__label-active";
+	let animationClass = "animation-test";
+	let inputCheckbox = ".publications__checkbox";
 
-function checkboxToggle(a, b, c, labelsListActive, labelActive, animationClass, inputCheckbox) {
-  let btn = document.querySelector(a);
-  let labels = document.querySelectorAll(b);
-  let listLabels = document.querySelector(c);
-btn.addEventListener("click", toggleSpoiler);
-  btn.addEventListener("keyup", function(e) {
-    console.log(e.key);
-    if (e.code === "Enter") {
-      toggleSpoiler();
-    }
-  })    
-function toggleSpoiler() {
-    if (!listLabels.classList.contains(labelsListActive)) {
-    listLabels.classList.add(labelsListActive);
-    labels.forEach(item => {
-     // item.classList.add("checkbox--label-active");
-      animationItem(item, labelActive, animationClass, "add");
-    })
-  } else {
-    listLabels.classList.remove(labelsListActive);
-    labels.forEach(item => {
-    	if (item.querySelector(inputCheckbox).checked) {
-    	animationItem(item, labelActive, animationClass, "add");
-      } else {
-        animationItem(item, labelActive, animationClass, "remove");
-      }
-      });
-  }
-  labels.forEach(item => {
-    item.addEventListener("click", function() {
-      if (!listLabels.classList.contains(labelsListActive)) {
-        animationItem(this, labelActive, animationClass, "remove");
-      }
-    });
-  })
-}
-function animationItem(item, class1, class2, f) {
- if (f === "add") {
-    item.classList.add(class1);
-  setTimeout(function() {
-    item.classList.add(class2)
-  }, 100);
+	function checkboxToggle(a, b, c, labelsListActive, labelActive, animationClass, inputCheckbox) {
+		let btn = document.querySelector(a);
+		let labels = document.querySelectorAll(b);
+		let listLabels = document.querySelector(c);
+		btn.addEventListener("click", toggleSpoiler);
+		btn.addEventListener("keyup", function (e) {
+			console.log(e.key);
+			if (e.code === "Enter") {
+				toggleSpoiler();
+			}
+		})
 
- } else {
-     item.classList.remove(class2);
-  setTimeout(function() {
-    item.classList.remove(class1)
-  }, 300);
-  }
-}
-}
+		function toggleSpoiler() {
+			if (!listLabels.classList.contains(labelsListActive)) {
+				btn.classList.add('is-active');
+				listLabels.classList.add(labelsListActive);
+				labels.forEach(item => {
+					// item.classList.add("checkbox--label-active");
+					animationItem(item, labelActive, animationClass, "add");
+				})
+			} else {
+				btn.classList.remove('is-active');
+				listLabels.classList.remove(labelsListActive);
+				labels.forEach(item => {
+					if (item.querySelector(inputCheckbox).checked) {
+						animationItem(item, labelActive, animationClass, "add");
+					} else {
+						animationItem(item, labelActive, animationClass, "remove");
+					}
+				});
+			}
+			labels.forEach(item => {
+				item.addEventListener("click", function () {
+					if (!listLabels.classList.contains(labelsListActive)) {
+						animationItem(this, labelActive, animationClass, "remove");
+					}
+				});
+			})
+		}
+
+		function animationItem(item, class1, class2, f) {
+			if (f === "add") {
+				item.classList.add(class1);
+				setTimeout(function () {
+					item.classList.add(class2)
+				}, 100);
+
+			} else {
+				item.classList.remove(class2);
+				setTimeout(function () {
+					item.classList.remove(class1)
+				}, 300);
+			}
+		}
+	}
 
 
-checkboxToggle(button, labels, labelsList, labelsListActive, labelActive, animationClass, inputCheckbox);
+	checkboxToggle(button, labels, labelsList, labelsListActive, labelActive, animationClass, inputCheckbox);
 };
 
 
@@ -318,6 +346,10 @@ const projectsSlider = new Swiper('.projects__slider', {
 		768: {
 			slidesPerView: 2,
 			spaceBetween: 34,
+		},
+		992: {
+			slidesPerView: 2,
+			spaceBetween: 50,
 		},
 		1200: {
 			slidesPerView: 3,
