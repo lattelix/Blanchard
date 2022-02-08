@@ -459,20 +459,9 @@ header {
   margin-right: 2px;
 }
 
-.subheader__label {
+.header__label-sub {
   position: relative;
   width: 218px;
-}
-
-.subheader__search-line {
-  content: "";
-  position: absolute;
-  left: 2px;
-  bottom: -4px;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #ffffffd9;
 }
 
 .header__logo-img {
@@ -776,7 +765,7 @@ header {
   .header__login {
     display: none;
     margin: 0;
-    letter-spacing: none;
+    letter-spacing: unset;
   }
 
   .header__login-mobile {
@@ -3169,7 +3158,7 @@ header {
   margin-bottom: 27px;
 }
 
-.contacts__info-heading--mobile {
+.contacts__info-heading-mobile {
   display: none;
 }
 
@@ -3457,12 +3446,12 @@ header {
     display: none;
   }
 
-  .contacts__info-heading--mobile {
+  .contacts__info-heading-mobile {
     margin-bottom: 16px;
     display: block;
   }
 
-  .contacts__info-heading--mobile .contacts__address-naming {
+  .contacts__info-heading-mobile .contacts__address-naming {
     font-size: 18px;
     margin-bottom: 0;
   }

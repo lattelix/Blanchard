@@ -171,6 +171,7 @@ $(function () {
   $(".catalogues__accordion").accordion({
     icons: false,
     heightStyle: "content",
+    collapsible: true,
   });
   document.querySelectorAll(".catalogues__tab-btn").forEach((item) => {
     item.addEventListener("click", function (e) {
@@ -181,7 +182,7 @@ $(function () {
         active: false,
       });
       let path = e.currentTarget.dataset.path;
-      document.querySelectorAll(".catalogues__content").forEach((el) => {
+      document.querySelectorAll(".catalogues__body").forEach((el) => {
         el.classList.remove("catalogues__body-active");
       });
       document.querySelectorAll(".catalogues__tab-btn").forEach((el) => {
@@ -194,9 +195,9 @@ $(function () {
     });
   });
 
-  document.querySelectorAll(".catalogues__content").forEach((item) => {
+  document.querySelectorAll(".catalogues__body").forEach((item) => {
     let btns = item.querySelectorAll(".catalogues__content-btn");
-    let articles = item.querySelectorAll(".article-content");
+    let articles = item.querySelectorAll(".catalogues__content");
     btns.forEach((el) => {
       el.addEventListener("click", function (e) {
         let path = e.currentTarget.dataset.path;

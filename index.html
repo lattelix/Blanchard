@@ -31,12 +31,12 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU">
 	</script>
 </head>
 
 <body>
-	<header>
+	<header class="header">
 		<div class=" header__bg-top">
 			<div class="container header__container">
 				<div class="header__burger">
@@ -284,7 +284,7 @@
 						</div>
 					</li>
 				</ul>
-				<form action="#" class="subheader__search form-search" name="search-form">
+				<form action="#" class="header__search-sub form-search" name="search-form">
 					<button class="header__search-btn">
 						<svg class="header__search-svg" width="23" height="22" viewBox="0 0 23 22" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
@@ -295,7 +295,7 @@
 								fill="white" />
 						</svg>
 					</button>
-					<label class="header__label subheader__label" for="subheader__search-input">
+					<label class="header__label header__label-sub" for="subheader__search-input">
 						<input id="subheader__search-input" name="search-input" class="header__search-input"
 							placeholder="Поиск по сайту" type="text"></label>
 				</form>
@@ -373,243 +373,219 @@
 					<div class="gallery__swiper-wrapper swiper-wrapper">
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/71-1920-1.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/67-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/67-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/67-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/71-1920-1.jpg 350w, img/image/gallery/67-1024.jpg 280w, img/image/gallery/67-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/67-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/67-1920-1.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/67-1024-1.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/67-768-1.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/144-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/67-1920-1.jpg 350w, img/image/gallery/67-1024-1.jpg 280w, img/image/gallery/67-768-1.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/144-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/68-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/68-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/106-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/137-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/68-1920.jpg 350w, img/image/gallery/68-1024.jpg 280w, img/image/gallery/106-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/137-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/69-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/69-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/69-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/69-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/69-1920.jpg 350w, img/image/gallery/69-1024.jpg 280w, img/image/gallery/69-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/69-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/68-1920-1.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/104-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/104-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/141-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/68-1920-1.jpg 350w, img/image/gallery/104-1024.jpg 280w, img/image/gallery/104-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/141-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/70-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/70-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/70-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/70-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/70-1920.jpg 350w, img/image/gallery/70-1024.jpg 280w, img/image/gallery/70-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/70-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/70-1920-1.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/70-1024-1.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/70-768-1.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/139-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/70-1920-1.jpg 350w, img/image/gallery/70-1024-1.jpg 280w, img/image/gallery/70-768-1.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/139-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/71-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/71-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/107-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/138-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/71-1920.jpg 350w, img/image/gallery/71-1024.jpg 280w, img/image/gallery/107-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/138-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/72-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/72-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/72-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/72-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/72-1920.jpg 350w, img/image/gallery/72-1024.jpg 280w, img/image/gallery/72-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/72-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/72-1920-1.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/72-1024-1.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/72-768-1.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/140-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/72-1920-1.jpg 350w, img/image/gallery/72-1024-1.jpg 280w, img/image/gallery/72-768-1.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/140-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/73-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/73-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/73-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/73-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/73-1920.jpg 350w, img/image/gallery/73-1024.jpg 280w, img/image/gallery/73-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/73-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/73-1920-1.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/73-1024-1.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/73-768-1.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/145-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/73-1920-1.jpg 350w, img/image/gallery/73-1024-1.jpg 280w, img/image/gallery/73-768-1.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/145-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/74-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/74-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/74-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/74-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/74-1920.jpg 350w, img/image/gallery/74-1024.jpg 280w, img/image/gallery/74-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/74-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/75-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/75-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/75-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/75-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/75-1920.jpg 350w, img/image/gallery/75-1024.jpg 280w, img/image/gallery/75-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/75-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/76-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/76-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/76-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/76-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/76-1920.jpg 350w, img/image/gallery/76-1024.jpg 280w, img/image/gallery/76-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/76-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/77-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/77-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/77-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/77-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/77-1920.jpg 350w, img/image/gallery/77-1024.jpg 280w, img/image/gallery/77-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/77-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/78-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/78-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/78-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/78-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/78-1920.jpg 350w, img/image/gallery/78-1024.jpg 280w, img/image/gallery/78-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/78-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/79-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/79-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/79-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/79-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/79-1920.jpg 350w, img/image/gallery/79-1024.jpg 280w, img/image/gallery/79-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/79-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/81-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/81-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/81-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/81-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/81-1920.jpg 350w, img/image/gallery/81-1024.jpg 280w, img/image/gallery/81-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/81-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/83-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/83-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/83-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/83-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/83-1920.jpg 350w, img/image/gallery/83-1024.jpg 280w, img/image/gallery/83-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/83-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/85-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/85-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/85-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/85-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/85-1920.jpg 350w, img/image/gallery/85-1024.jpg 280w, img/image/gallery/85-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/85-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/87-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/87-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/87-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/87-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/87-1920.jpg 350w, img/image/gallery/87-1024.jpg 280w, img/image/gallery/87-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/87-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/89-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/89-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/89-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/89-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/89-1920.jpg 350w, img/image/gallery/89-1024.jpg 280w, img/image/gallery/89-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/89-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 						<button tabindex="0" class="gallery__slide swiper-slide">
 							<picture>
-								<source media="(min-width: 1200px)" srcset="img/image/gallery/91-1920.jpg" sizes="">
-								<source media="(min-width: 920px)" srcset="img/image/gallery/91-1024.jpg" sizes="">
-								<source media="(min-width: 576px)" srcset="img/image/gallery/91-768.jpg" sizes="">
-							<img loading="lazy" src="img/image/gallery/91-320.jpg"
-								alt="Картина из галереи" class="gallery__slide-img">
+								<source
+									srcset="img/image/gallery/91-1920.jpg 350w, img/image/gallery/91-1024.jpg 280w, img/image/gallery/91-768.jpg 317w"
+									sizes="(min-width: 1200px) 350px, (min-width: 920px) 280px, (min-width: 576px) 317px, 290px">
+								<img loading="lazy" src="img/image/gallery/91-320.jpg" alt="Картина из галереи"
+									class="gallery__slide-img">
 							</picture>
-								<!-- <div class="swiper-lazy-preloader"></div> -->
 						</button>
 					</div>
 				</div>
@@ -650,7 +626,7 @@
 					нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на
 					независимые элементы. </p>
 				<div data-target="3" class="catalogues__body catalogues__body-active">
-					<div class="catalogues__content article-tabActive" data-target="artist">
+					<article class="catalogues__content article-tabActive" data-target="artist">
 						<div class="catalogues__portrait">
 							<img loading="lazy" class="catalogues__portrait-img" src="img/image/1af2a905dc8.jpg"
 								alt="Портрет деятеля">
@@ -666,15 +642,15 @@
 							циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских
 							персонажей (в
 							их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
-					</div>
-					<div class="catalogues__content" data-target="other">
+					</article>
+					<article class="catalogues__content" data-target="other">
 						<div class="catalogues__portrait">
 						</div>
 						<h3 class="catalogues__naming">Что мы о нём знаем?</h3>
 						<p class="catalogues__content-desc">Пока ничего... Зато мы точно знаем, что в галерее есть на что
 							посмотреть!</p>
 						<a href="#gallery" class="catalogues__link link">В галерею</a>
-					</div>
+					</article>
 					<ul class="catalogues__accordion">
 						<li class="catalogues__item-container">
 							<div class="catalogues__item-title">
@@ -685,7 +661,8 @@
 							<div class="catalogues__item-content">
 								<ul class="catalogues__content-list">
 									<li class="catalogues__content-item">
-										<button data-path="artist" class="article-btn-active catalogues__content-btn link">Доменико
+										<button data-path="artist"
+											class="article-btn-active catalogues__content-btn link">Доменико
 											Гирландайо</button>
 									</li>
 									<li class="catalogues__content-item">
@@ -895,121 +872,142 @@
 							посмотреть!</p>
 						<a href="#gallery" class="catalogues__link link">В галерею</a>
 					</div>
-					<div class="catalogues__accordion">
-						<div class="catalogues__item-title">
-							<span class="catalogues__item-naming">C 1400 по 1499 гг.</span>
-							<div class="catalogues__item-icon">
-							</div>
-						</div>
-						<div class="catalogues__item-content">
-							<div class="catalogues__placeholder-item">
-								<div class="catalogues__placeholder-img"></div>
-								<div class="catalogues__placeholder-desc">
-									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
-									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное
-										для
-										себя</p>
-									<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+					<ul class="catalogues__accordion">
+						<li class="catalogues__item-container">
+							<div class="catalogues__item-title">
+								<span class="catalogues__item-naming">C 1400 по 1499 гг.</span>
+								<div class="catalogues__item-icon">
 								</div>
 							</div>
-						</div>
-						<div class="catalogues__item-title">
-							<span class="catalogues__item-naming">C 1500 по 1599 гг.</span>
-							<div class="catalogues__item-icon"></div>
-						</div>
-						<div class="catalogues__item-content">
-							<div class="catalogues__placeholder-item">
-								<div class="catalogues__placeholder-img"></div>
-								<div class="catalogues__placeholder-desc">
-									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
-									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное
-										для
-										себя</p>
-									<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+							<div class="catalogues__item-content">
+								<div class="catalogues__placeholder-item">
+									<div class="catalogues__placeholder-img"></div>
+									<div class="catalogues__placeholder-desc">
+										<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+										<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то
+											интересное
+											для
+											себя</p>
+										<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="catalogues__item-title">
-							<span class="catalogues__item-naming">C 1600 по 1699 гг.</span>
-							<div class="catalogues__item-icon"></div>
-						</div>
-						<div class="catalogues__item-content">
-							<div class="catalogues__placeholder-item">
-								<div class="catalogues__placeholder-img"></div>
-								<div class="catalogues__placeholder-desc">
-									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
-									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное
-										для
-										себя</p>
-									<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+						</li>
+						<li class="catalogues__item-container">
+							<div class="catalogues__item-title">
+								<span class="catalogues__item-naming">C 1500 по 1599 гг.</span>
+								<div class="catalogues__item-icon"></div>
+							</div>
+							<div class="catalogues__item-content">
+								<div class="catalogues__placeholder-item">
+									<div class="catalogues__placeholder-img"></div>
+									<div class="catalogues__placeholder-desc">
+										<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+										<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то
+											интересное
+											для
+											себя</p>
+										<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="catalogues__item-title">
-							<span class="catalogues__item-naming">C 1700 по 1799 гг.</span>
-							<div class="catalogues__item-icon"></div>
-						</div>
-						<div class="catalogues__item-content">
-							<div class="catalogues__placeholder-item">
-								<div class="catalogues__placeholder-img"></div>
-								<div class="catalogues__placeholder-desc">
-									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
-									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное
-										для
-										себя</p>
-									<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+						</li>
+						<li class="catalogues__item-container">
+							<div class="catalogues__item-title">
+								<span class="catalogues__item-naming">C 1600 по 1699 гг.</span>
+								<div class="catalogues__item-icon"></div>
+							</div>
+							<div class="catalogues__item-content">
+								<div class="catalogues__placeholder-item">
+									<div class="catalogues__placeholder-img"></div>
+									<div class="catalogues__placeholder-desc">
+										<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+										<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то
+											интересное
+											для
+											себя</p>
+										<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="catalogues__item-title">
-							<span class="catalogues__item-naming">C 1800 по 1899 гг.</span>
-							<div class="catalogues__item-icon"></div>
-						</div>
-						<div class="catalogues__item-content">
-							<div class="catalogues__placeholder-item">
-								<div class="catalogues__placeholder-img"></div>
-								<div class="catalogues__placeholder-desc">
-									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
-									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное
-										для
-										себя</p>
-									<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+						</li>
+						<li class="catalogues__item-container">
+							<div class="catalogues__item-title">
+								<span class="catalogues__item-naming">C 1700 по 1799 гг.</span>
+								<div class="catalogues__item-icon"></div>
+							</div>
+							<div class="catalogues__item-content">
+								<div class="catalogues__placeholder-item">
+									<div class="catalogues__placeholder-img"></div>
+									<div class="catalogues__placeholder-desc">
+										<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+										<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то
+											интересное
+											для
+											себя</p>
+										<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="catalogues__item-title">
-							<span class="catalogues__item-naming">C 1900 по 1999 гг.</span>
-							<div class="catalogues__item-icon"></div>
-						</div>
-						<div class="catalogues__item-content">
-							<div class="catalogues__placeholder-item">
-								<div class="catalogues__placeholder-img"></div>
-								<div class="catalogues__placeholder-desc">
-									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
-									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное
-										для
-										себя</p>
-									<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+						</li>
+						<li class="catalogues__item-container">
+							<div class="catalogues__item-title">
+								<span class="catalogues__item-naming">C 1800 по 1899 гг.</span>
+								<div class="catalogues__item-icon"></div>
+							</div>
+							<div class="catalogues__item-content">
+								<div class="catalogues__placeholder-item">
+									<div class="catalogues__placeholder-img"></div>
+									<div class="catalogues__placeholder-desc">
+										<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+										<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то
+											интересное
+											для
+											себя</p>
+										<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="catalogues__item-title">
-							<span class="catalogues__item-naming">C 2000 г.</span>
-							<div class="catalogues__item-icon"></div>
-						</div>
-						<div class="catalogues__item-content">
-							<div class="catalogues__placeholder-item">
-								<div class="catalogues__placeholder-img"></div>
-								<div class="catalogues__placeholder-desc">
-									<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
-									<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то интересное
-										для
-										себя</p>
-									<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+						</li>
+						<li class="catalogues__item-container">
+							<div class="catalogues__item-title">
+								<span class="catalogues__item-naming">C 1900 по 1999 гг.</span>
+								<div class="catalogues__item-icon"></div>
+							</div>
+							<div class="catalogues__item-content">
+								<div class="catalogues__placeholder-item">
+									<div class="catalogues__placeholder-img"></div>
+									<div class="catalogues__placeholder-desc">
+										<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+										<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то
+											интересное
+											для
+											себя</p>
+										<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+						</li>
+						<li class="catalogues__item-container">
+							<div class="catalogues__item-title">
+								<span class="catalogues__item-naming">C 2000 г.</span>
+								<div class="catalogues__item-icon"></div>
+							</div>
+							<div class="catalogues__item-content">
+								<div class="catalogues__placeholder-item">
+									<div class="catalogues__placeholder-img"></div>
+									<div class="catalogues__placeholder-desc">
+										<h3 class="catalogues__placeholder-naming">Здесь пока пусто</h3>
+										<p class="catalogues__placeholder-text">А в галерее вы всегда можете найти что-то
+											интересное
+											для
+											себя</p>
+										<a href="#gallery" class="link catalogues__placeholder-link">В галерею</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</section>
@@ -1468,7 +1466,7 @@
 		<section id="contacts" class="contacts">
 			<div class="container">
 				<h2 class="contacts__title">Контакты</h2>
-				<div class="contacts__info-heading--mobile">
+				<div class="contacts__info-heading-mobile">
 					<h2 class="contacts__address-naming">Шоурум №2</h2>
 					<address class="contacts__address">
 						<p class="contacts__address-info">Леонтьевский переулок, дом 5/1</p>
@@ -1520,7 +1518,7 @@
 		</section>
 	</main>
 
-	<footer>
+	<footer class="footer">
 		<div class="container footer__container">
 			<img src="img/logo/logo.svg" alt="логотип Blanchard" class="footer__logo">
 			<ul class="footer__social">
