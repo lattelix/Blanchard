@@ -1,6 +1,6 @@
-//* scroll 
+//* scroll
 
-(function(document, history, location) {
+(function (document, history, location) {
   var HISTORY_SUPPORT = !!(history && history.pushState);
 
   var anchorScrolls = {
@@ -10,17 +10,17 @@
     /**
      * Establish events, and fix initial scroll position if a hash is provided.
      */
-    init: function() {
+    init: function () {
       this.scrollToCurrent();
-      window.addEventListener('hashchange', this.scrollToCurrent.bind(this));
-      document.body.addEventListener('click', this.delegateAnchors.bind(this));
+      window.addEventListener("hashchange", this.scrollToCurrent.bind(this));
+      document.body.addEventListener("click", this.delegateAnchors.bind(this));
     },
 
     /**
      * Return the offset amount to deduct from the normal scroll position.
      * Modify as appropriate to allow for dynamic calculations
      */
-    getFixedOffset: function() {
+    getFixedOffset: function () {
       return this.OFFSET_HEIGHT_PX;
     },
 
@@ -30,22 +30,22 @@
      * @param  {String} href
      * @return {Boolean} - Was the href an anchor.
      */
-    scrollIfAnchor: function(href, pushToHistory) {
+    scrollIfAnchor: function (href, pushToHistory) {
       var match, rect, anchorOffset;
 
-      if(!this.ANCHOR_REGEX.test(href)) {
+      if (!this.ANCHOR_REGEX.test(href)) {
         return false;
       }
 
       match = document.getElementById(href.slice(1));
 
-      if(match) {
+      if (match) {
         rect = match.getBoundingClientRect();
         anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset();
         window.scrollTo(window.pageXOffset, anchorOffset);
 
         // Add the state to history as-per normal anchor links
-        if(HISTORY_SUPPORT && pushToHistory) {
+        if (HISTORY_SUPPORT && pushToHistory) {
           history.pushState({}, document.title, location.pathname + href);
         }
       }
@@ -56,30 +56,44 @@
     /**
      * Attempt to scroll to the current location hash.
      */
-    scrollToCurrent: function() {
+    scrollToCurrent: function () {
       this.scrollIfAnchor(window.location.hash);
     },
 
     /**
      * If the click event target was an anchor, fix the scroll position.
      */
-    delegateAnchors: function(e) {
+    delegateAnchors: function (e) {
       var elem = e.target;
 
-      if(
-        elem.nodeName === 'A' &&
-        this.scrollIfAnchor(elem.getAttribute('href'), true)
+      if (
+        elem.nodeName === "A" &&
+        this.scrollIfAnchor(elem.getAttribute("href"), true)
       ) {
         e.preventDefault();
       }
-    }
+    },
   };
 
   window.addEventListener(
-    'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
+    "DOMContentLoaded",
+    anchorScrolls.init.bind(anchorScrolls)
   );
 })(window.document, window.history, window.location);
 
+//* burger
+
+let burger = document.querySelector(".header__burger");
+let burgerMobile = document.querySelector(".header__burger-mobile");
+let navMobile = document.querySelector(".header__nav");
+
+burger.addEventListener("click", function () {
+    navMobile.classList.add("is-active");
+});
+
+burgerMobile.addEventListener("click", function () {
+    navMobile.classList.remove("is-active");
+});
 
 //* header dropdown
 
@@ -175,80 +189,7 @@ const gallerySlider = new Swiper(".gallery__slider", {
   },
 });
 
-//* catalogues tabs
-
-// document.querySelectorAll(".catalogues__tab-btn").forEach(function (tabsBtn) {
-//   tabsBtn.addEventListener("click", function (event) {
-//     document
-//       .querySelectorAll(".catalogues__tab-btn")
-//       .forEach(function (tabs_btn) {
-//         tabs_btn.classList.remove("catalogues__tab-active");
-//       });
-//     this.classList.add("catalogues__tab-active");
-//     const tabPath = event.currentTarget.dataset.tab_path;
-//     document
-//       .querySelectorAll(".catalogues__body")
-//       .forEach(function (tabContent) {
-//         tabContent.classList.remove("catalogues__body-active");
-//       });
-//     document
-//       .querySelector(`[data-target="${tabPath}"]`)
-//       .classList.add("catalogues__body-active");
-//   });
-// });
-
-// document.querySelectorAll(".tab-content").forEach((item) => {
-// 	// let btns = item.find(".ac--list__iten-tab");
-// 	let btns = item.querySelectorAll(".catalogues__content-btn");
-// 	let articles = item.querySelectorAll(".catalogues__content");
-// 	btns.forEach((el) => {
-// 	  el.addEventListener("click", function (e) {
-// 		 let path = e.currentTarget.dataset.path;
-// 		 let tabCont = item.querySelector(`[data-target='${path}']`);
-// 		 console.log(tabCont);
-// 		 articles.forEach((el) => {
-// 			el.classList.remove("article-tabActive");
-// 		 });
-// 		 btns.forEach((el) => {
-// 			el.classList.remove("article-btn-active");
-// 		 });
-// 		 tabCont.classList.add("article-tabActive");
-// 		 this.classList.add("article-btn-active");
-// 	  });
-// 	});
-//  });
-
-// document.querySelectorAll(".catalogues__content").forEach((item) => {
-//   // let btns = item.find(".ac--list__iten-tab");
-//   let btns = item.querySelectorAll(".catalogues__content-btn");
-//   let articles = item.querySelectorAll(".article-content");
-//   btns.forEach((el) => {
-//     el.addEventListener("click", function (e) {
-//       let path = e.currentTarget.dataset.path;
-//       let tabCont = item.querySelector(`[data-target='${path}']`);
-//       console.log(tabCont);
-//       articles.forEach((el) => {
-//         el.classList.remove("article-tabActive");
-//       });
-//       btns.forEach((el) => {
-//         el.classList.remove("article-btn-active");
-//       });
-//       tabCont.classList.add("article-tabActive");
-//       this.classList.add("article-btn-active");
-//     });
-//   });
-// });
-
-//* catalogues accordion
-
-// $(function () {
-//   $(".catalogues__accordion").accordion({
-//     icons: false,
-//     heightStyle: "content",
-//     collapsible: true,
-//     active: 0,
-//   });
-// });
+//* catalogues
 
 $(function () {
   $(".catalogues__accordion").accordion({
