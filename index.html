@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="css/simplebar.css">
 	<link rel="stylesheet" href="css/choices.min.css">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/svg-arrow.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
 
@@ -61,11 +62,11 @@
 						<input id="header__search-input" name="search-input" class="header__search-input" type="text"></label>
 				</form>
 				<nav class="header__nav">
+					<button class="header__burger-mobile">
+						<span class="header__burger-line"></span>
+						<span class="header__burger-line"></span>
+					</button>
 					<ul class="header__nav-list">
-						<button class="header__burger-mobile">
-							<span class="header__burger-line"></span>
-							<span class="header__burger-line"></span>
-						</button>
 						<li class="header__nav-item"><a href="#about" class="header__nav-link link-darken">О&nbsp;нас</a></li>
 						<li class="header__nav-item"><a href="#gallery" class="header__nav-link link-darken">Галерея</a></li>
 						<li class="header__nav-item"><a href="#catalogues" class="header__nav-link link-darken">Каталог</a>
@@ -1364,7 +1365,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- TODO: Разобраться с подсказками, из за них едет вёрстка -->
 		<section id="projects" class="projects">
 			<div class="container">
 				<h2 class="projects__title">Проекты</h2>
@@ -1374,7 +1374,15 @@
 					государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает
 					их
 					статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
-					<span class="projects__tooltip">
+					<button class="projects__tooltip" id="tooltip" data-tippy-content="Пример современных тенденций - современная методология
+					разработки">
+						<svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z"
+								fill="black" />
+						</svg>
+					</button>
+					<!-- <span class="projects__tooltip">
 						<span class="projects__tooltip-marker" tabindex="0">
 							<svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -1382,37 +1390,30 @@
 									fill="black" />
 							</svg>
 						</span>
-						<span class="projects__tooltip-popup">Пример современных тенденций - современная методология
-							разработки</span>
-					</span>
+						<span class="projects__tooltip-popup"></span>
+					</span> -->
 					обеспечение нашей
 					деятельности
 					однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений,
 					что
 					действия представителей оппозиции могут быть рассмотрены
-					<span class="projects__tooltip">
-						<span class="projects__tooltip-marker" tabindex="0">
-							<svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z"
-									fill="black" />
-							</svg>
-						</span>
-						<span class="projects__tooltip-popup">Приятно, граждане, наблюдать, как сделанные на базе аналитики
-							выводы
-							вызывают у вас эмоции</span>
-					</span>
+					<button class="projects__tooltip" id="tooltip" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики
+					выводы
+					вызывают у вас эмоции">
+						<svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z"
+								fill="black" />
+						</svg>
+					</button>
 					исключительно в разрезе маркетинговых и финансовых
-					<span class="projects__tooltip">
-						<span class="projects__tooltip-marker" tabindex="0">
-							<svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z"
-									fill="black" />
-							</svg>
-						</span>
-						<span class="projects__tooltip-popup">В стремлении повысить качество </span>
-					</span>
+					<button class="projects__tooltip" id="tooltip" data-tippy-content="В стремлении повысить качество">
+						<svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z"
+								fill="black" />
+						</svg>
+					</button>
 					предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
 					призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными
 					до
@@ -1570,6 +1571,19 @@
 	<script src="js/choices.min.js"></script>
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script>
+		tippy('#tooltip', {
+			arrow: `<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 8L7.00001 0L14 8H0Z" fill="#9D5CD0"/>
+</svg>`,
+			hideOnClick: true,
+			trigger: "click",
+			theme: 'tooltip-theme',
+			zIndex: 4,
+		});
+	</script>
 	<script src="js/just-validate.min.js"></script>
 	<script src="js/inputmask.min.js"></script>
 	<script src="js/script.js"></script>

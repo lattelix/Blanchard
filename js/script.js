@@ -251,7 +251,7 @@ const eventsSlider = new Swiper(".events__content", {
   slidesPerView: 1,
   spaceBetween: 100,
   breakpoints: {
-    576: {
+    720: {
       spaceBetween: 0,
       enabled: false,
     },
