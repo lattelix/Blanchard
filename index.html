@@ -47,8 +47,9 @@
 				</button>
 				<a tabindex="0" href="index.html" class="header__logo">
 					<img src="img/logo/logo.svg" alt="логотип Blanchard" class="header__logo-img"></a>
-				<form action="#" class="header__search form-search" name="search-form">
-					<button class="header__search-btn">
+				<form action="#" id="search-slider_form" class="header__search header__search-mobile form-search"
+					name="search-form">
+					<button id="search-slider_btn" class="header__search-btn" type="button">
 						<svg class="header__search-svg" width="23" height="22" viewBox="0 0 23 22" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<rect width="6.8678" height="1.71695"
@@ -58,8 +59,15 @@
 								fill="white" />
 						</svg>
 					</button>
-					<label for="header__search-input">
-						<input id="header__search-input" name="search-input" class="header__search-input" type="text"></label>
+					<input id="text-to-find" name="search-input" class="header__search-input" type="text">
+					<button class="header__search-close" id="header__search-close" type="button">
+						<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="19.2824" height="1.92824"
+								transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.36572 0.00146484)" fill="white" />
+							<rect width="19.2824" height="1.92824"
+								transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 13.6365)" fill="white" />
+						</svg>
+					</button>
 				</form>
 				<nav class="header__nav">
 					<button class="header__burger-mobile">
@@ -290,7 +298,7 @@
 					</li>
 				</ul>
 				<form action="#" class="header__search-sub form-search" name="search-form">
-					<button class="header__search-btn">
+					<button class="header__search-btn" type="button">
 						<svg class="header__search-svg" width="23" height="22" viewBox="0 0 23 22" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<rect width="6.8678" height="1.71695"
@@ -300,8 +308,8 @@
 								fill="white" />
 						</svg>
 					</button>
-					<label class="header__label header__label-sub" for="subheader__search-input">
-						<input id="subheader__search-input" name="search-input" class="header__search-input"
+					<label class="header__label header__label-sub" for="subheader__search-sub-input">
+						<input id="subheader__search-sub-input" name="search-input" class="header__search-input"
 							placeholder="Поиск по сайту" type="text"></label>
 				</form>
 			</div>
@@ -703,10 +711,6 @@
 									</li>
 									<li class="catalogues__content-item">
 										<button data-path="other" class="catalogues__content-btn link">Беноццо Гоццоли</button>
-									</li>
-									<li class="catalogues__content-item">
-										<button data-path="other" class="catalogues__content-btn link">Доменико
-											Гирландайо</button>
 									</li>
 									<li class="catalogues__content-item">
 										<button data-path="other" class="catalogues__content-btn link">Перуцци,
@@ -1269,10 +1273,10 @@
 					<p class="publications__prescription publications__prescription-price">Цена</p>
 					<div class="publications__price">
 						<span class="publications__price-text">От</span>
-						<input class="publications__price-input" value="50" type="text" name="price-min"
+						<input class="publications__price-input" placeholder="50" type="text" name="price-min"
 							id="publications__price-min">
 						<span class="publications__price-text">до</span>
-						<input class="publications__price-input" value="25 000 000" type="text" name="price-max"
+						<input class="publications__price-input" placeholder="25 000" type="text" name="price-max"
 							id="publications__price-max">
 						<span class="publications__price-text">руб.</span>
 					</div>
@@ -1382,16 +1386,6 @@
 								fill="black" />
 						</svg>
 					</button>
-					<!-- <span class="projects__tooltip">
-						<span class="projects__tooltip-marker" tabindex="0">
-							<svg width="2" height="10" viewBox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z"
-									fill="black" />
-							</svg>
-						</span>
-						<span class="projects__tooltip-popup"></span>
-					</span> -->
 					обеспечение нашей
 					деятельности
 					однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений,
