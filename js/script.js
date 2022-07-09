@@ -99,16 +99,40 @@ burgerMobile.addEventListener("click", function () {
 
 let form_box = document.querySelector("#search-slider_form");
 let form_btn = document.querySelector("#search-slider_btn");
-// let form_text = document.querySelector("#text-to-find");
+let form_text = document.querySelector("#text-to-find");
 let form_cancel = document.querySelector("#header__search-close");
+
+let burger_btn = document.querySelector("#burgerButton");
+let logo_img = document.querySelector("#headerLogo");
 
 form_btn.addEventListener("click", function () {
   form_box.classList.add("is-active");
+  form_text.focus();
+  form_cancel.classList.remove("visuallyhidden");
+  form_text.classList.remove("visuallyhidden");
 });
 
 form_cancel.addEventListener("click", function () {
   form_box.classList.remove("is-active");
+  form_text.value = "";
+  form_cancel.classList.add("visuallyhidden");
+  form_text.classList.add("visuallyhidden");
 });
+
+if (window.innerWidth <= 992) {
+  form_cancel.classList.add("visuallyhidden");
+  form_text.classList.add("visuallyhidden");
+
+  form_btn.addEventListener("click", function () {
+    burger_btn.classList.add("hidden-in", "visuallyhidden");
+    logo_img.classList.add("hidden-in", "visuallyhidden");
+  });
+
+  form_cancel.addEventListener("click", function () {
+    burger_btn.classList.remove("hidden-in", "visuallyhidden");
+    logo_img.classList.remove("hidden-in", "visuallyhidden");
+  });
+}
 
 // let input, search, pr, result, result_arr, locale_HTML, result_store;
 
